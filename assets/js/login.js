@@ -104,7 +104,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         if (usernameError == true || emailError == true || passwordError == true || passConfirm == true || phoneError  == true) {
-            $('.name, .email, .pass, .passConfirm').blur();
+            $('.name, .email, .pass, .passConfirm , .phone').blur();
         } else {
             $('.signup, .login').addClass('switched');
 
