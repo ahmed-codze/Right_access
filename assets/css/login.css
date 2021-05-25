@@ -92,7 +92,7 @@ section#formHolder {
     font-family: "Raleway", sans-serif;
   }
   .brand .success-msg a {
-    font-size: 12px;
+    font-size: 16px;
     text-transform: uppercase;
     padding: 8px 30px;
     background: #f95959;
@@ -152,7 +152,7 @@ section#formHolder {
     color: #f95959 !important;
   }
   .form form label {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
@@ -188,7 +188,7 @@ section#formHolder {
   .form form span.error {
     color: #f95959;
     font-family: "Montserrat", sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     position: absolute;
     bottom: -20px;
     right: 0;
@@ -201,7 +201,7 @@ section#formHolder {
     margin-top: 30px;
   }
   .form form .CTA input {
-    font-size: 12px;
+    font-size: 16px;
     text-transform: uppercase;
     padding: 5px 30px;
     background: #f95959;
