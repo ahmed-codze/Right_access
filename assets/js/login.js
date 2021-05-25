@@ -5,7 +5,8 @@ $(document).ready(function () {
     var usernameError = true,
         emailError    = true,
         passwordError = true,
-        passConfirm   = true;
+        passConfirm   = true,
+        phoneError    = true;
 
     // Detect browser for css purpose
     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
@@ -42,6 +43,17 @@ $(document).ready(function () {
             } else {
                 $(this).siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
                 emailError = false;
+            }
+        }
+
+        // phone
+        if ($(this).hasClass('phone')) {
+            if ($(this).val().length == '') {
+                $(this).siblings('span.error').text('Please type your phone number').fadeIn().parent('.form-group').addClass('hasError');
+                phoneError = true;
+            } else {
+                $(this).siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
+                phoneError = false;
             }
         }
 
@@ -91,7 +103,7 @@ $(document).ready(function () {
     $('form.signup-form').submit(function (event) {
         event.preventDefault();
 
-        if (usernameError == true || emailError == true || passwordError == true || passConfirm == true) {
+        if (usernameError == true || emailError == true || passwordError == true || passConfirm == true || phoneError  == true) {
             $('.name, .email, .pass, .passConfirm').blur();
         } else {
             $('.signup, .login').addClass('switched');

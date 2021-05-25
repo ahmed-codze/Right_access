@@ -188,7 +188,7 @@ section#formHolder {
   .form form span.error {
     color: #f95959;
     font-family: "Montserrat", sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     position: absolute;
     bottom: -20px;
     right: 0;
@@ -204,7 +204,7 @@ section#formHolder {
     font-size: 16px;
     text-transform: uppercase;
     padding: 5px 30px;
-    background: #f95959;
+    background: #4154f1;
     color: #fff;
     border-radius: 30px;
     margin-right: 20px;
