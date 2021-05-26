@@ -125,10 +125,6 @@ $(document).ready(function () {
     });
 
     // Reload page
-    $('a.profile').on('click', function () {
-        alert("will reqired to profile page")
-        alert("profile page not finished")
-    });
 
 
 });

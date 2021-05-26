@@ -1144,7 +1144,7 @@ section {
   border: 2px solid #4154f1;
   color: #fff;
 }
- 
+
 .cta .cta-btn:hover {
   background: #4154f1;
   border: 2px solid #4154f1;
@@ -1326,6 +1326,9 @@ section {
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+}
+.portfolio-details-slider-pictures {
+  cursor: grab;
 }
 
 /*--------------------------------------------------------------
