@@ -24,6 +24,9 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/font awesome/all.min.css" rel="stylesheet" />
 
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.7.0/main.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.7.0/main.js'></script>
+
 
   <!--  Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -141,25 +144,87 @@
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
                         </div>
+                        <hr>
+                        <div class="date row ">
+                          <div class="col-6">
+                              <h3>start date : </h3>
+                              <p style="margin-left: 20px;">3/3/2021</p>
+                          </div>
+                          <div class="col-6">
+                            <h3>dead line : </h3>
+                            <p style="margin-left: 20px;">3/5/2021</p>
+                          </div>
+                        </div>
+
+                        <div id='calendar'></div>
+                        
+
 
                     </div>
 
                 </div>
 
                 <div class="col-md-6">
-                    <div class="project-card">
-                        <h1>Project Name</h1>
-                        <hr>
-                        <p>project description</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dicta veritatis corporis veniam doloremque temporibus explicabo minima nobis nulla corrupti!</p>
-                        <hr>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                  <div class="project-card">
+                      <h1>Project Name</h1>
+                      <hr>
+                      <p>project description</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dicta veritatis corporis veniam doloremque temporibus explicabo minima nobis nulla corrupti!</p>
+                      <hr>
+                      <div class="progress">
+                          <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                      </div>
+                      <hr>
+                      <div class="date row ">
+                        <div class="col-6">
+                            <h3>start date : </h3>
+                            <p style="margin-left: 20px;">3/3/2021</p>
                         </div>
+                        <div class="col-6">
+                          <h3>dead line : </h3>
+                          <p style="margin-left: 20px;">3/5/2021</p>
+                        </div>
+                      </div>
 
+                      <div id='calendar2'></div>
+                      
+
+
+                  </div>
+
+              </div>
+
+              <div class="col-md-6">
+                <div class="project-card">
+                    <h1>Project Name</h1>
+                    <hr>
+                    <p>project description</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dicta veritatis corporis veniam doloremque temporibus explicabo minima nobis nulla corrupti!</p>
+                    <hr>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                    </div>
+                    <hr>
+                    <div class="date row ">
+                      <div class="col-6">
+                          <h3>start date : </h3>
+                          <p style="margin-left: 20px;">3/3/2021</p>
+                      </div>
+                      <div class="col-6">
+                        <h3>dead line : </h3>
+                        <p style="margin-left: 20px;">3/5/2021</p>
+                      </div>
                     </div>
 
+                    <div id='calendar3'></div>
+                    
+
+
                 </div>
+
+            </div>
+
+
 
 
             </div>
@@ -255,6 +320,80 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth' ,
+        events: [
+        { // this object will be "parsed" into an Event Object
+          title: 'meating', // a property!
+          start: '2021-06-01', // a property!
+          end: '2021-06-02' // a property! ** see important note below about 'end' **
+        },
+
+        { // this object will be "parsed" into an Event Object
+          title: 'meating', // a property!
+          start: '2021-06-04', // a property!
+          end: '2021-06-05' // a property! ** see important note below about 'end' **
+        }
+        
+        ]
+
+      });
+      calendar.render();
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar2');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth' ,
+        events: [
+        { // this object will be "parsed" into an Event Object
+          title: 'meating', // a property!
+          start: '2021-06-01', // a property!
+          end: '2021-06-02' // a property! ** see important note below about 'end' **
+        },
+
+        { // this object will be "parsed" into an Event Object
+          title: 'meating', // a property!
+          start: '2021-06-04', // a property!
+          end: '2021-06-05' // a property! ** see important note below about 'end' **
+        }
+        
+        ]
+
+      });
+      calendar.render();
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar3');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth' ,
+        events: [
+        { // this object will be "parsed" into an Event Object
+          title: 'meating', // a property!
+          start: '2021-06-10', // a property!
+          end: '2021-06-12' // a property! ** see important note below about 'end' **
+        },
+
+        { // this object will be "parsed" into an Event Object
+          title: 'event', // a property!
+          start: '2021-06-04', // a property!
+          end: '2021-06-05' // a property! ** see important note below about 'end' **
+        }
+        
+        ]
+
+      });
+      calendar.render();
+    });
+
+  </script>
 
 </body>
 
