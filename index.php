@@ -32,16 +32,19 @@
 <body>
   <script async="async" src="https://static.mobilemonkey.com/js/business_7284f9b8-1edf-429a-82da-485195b500e9-87930694.js"></script>
   <script>
-  window.mmDataLayer = window.mmDataLayer || [];
-  function mmData(o) { mmDataLayer.push(o); }
+    window.mmDataLayer = window.mmDataLayer || [];
+
+    function mmData(o) {
+      mmDataLayer.push(o);
+    }
   </script>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <!-- <h1 class="logo"><a href="index.html">Multi</a></h1> -->
+      <!-- <h1 class="logo"><a href="index.php">Right Access</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      <a href="index.php" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -50,10 +53,24 @@
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#portfolio">projects</a></li>
           <li><a class="nav-link scrollto " href="#technologies">technologies</a></li>
-          <li><a class="nav-link scrollto" href="profile.html">Profile</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="nav-link scrollto " href="login.html">login</a></li>
-          <li><a class="getstarted scrollto" href="login.html">Get Started</a></li>
+          <?php
+
+          if (isset($_COOKIE['user'])) {
+            echo '
+  <li><a class="nav-link scrollto" href="profile.php?user=' . $_COOKIE['user'] . '">Profile</a></li>
+  <li><a class="nav-link scrollto " href="login.php?logout=true">log out</a></li>
+
+  ';
+          } else {
+            echo '
+  <li><a class="nav-link scrollto " href="login.php">login</a></li>
+  ';
+          }
+
+          ?>
+          <li><a class="getstarted scrollto" href="login.php">Get Started</a></li>
+
         </ul>
         <i class="fas fa-bars mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -136,8 +153,8 @@
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Engitech is the partner of choice for many of the world’s leading enterprises, 
-              SMEs and technology challengers. We help businesses elevate their value through 
+              Engitech is the partner of choice for many of the world’s leading enterprises,
+              SMEs and technology challengers. We help businesses elevate their value through
               custom software development, product design, QA and consultancy services.
             </p>
             <a href="#why-us" class="btn-learn-more">Learn More</a>
@@ -190,7 +207,7 @@
       <div class="container-fluid" data-aos="fade-up">
 
         <div class="row">
-          
+
           <div class="col-lg-5 align-items-stretch video-box" style='background-image: url("assets/img/why-us.jpg");' data-aos="zoom-in" data-aos-delay="100">
           </div>
 
@@ -199,10 +216,10 @@
             <div class="content">
               <h3>Improve and Innovate with the Tech Trends</h3>
               <p>
-                We hire and build your own remote dedicated development teams tailored to your specific needs. 
-                Get professional fulltime developers who work exclusively for you as a part of your company. 
-                We handle all the practical aspects related to hiring and hosting your team at our premises, 
-                thus saving you half a cost and a lot of efforts.              
+                We hire and build your own remote dedicated development teams tailored to your specific needs.
+                Get professional fulltime developers who work exclusively for you as a part of your company.
+                We handle all the practical aspects related to hiring and hosting your team at our premises,
+                thus saving you half a cost and a lot of efforts.
               </p>
             </div>
 
@@ -212,9 +229,9 @@
                   <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Our Mission <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                     <p>
-                      Our mission is to promote business growth for our customers through creative 
-                      design and development and deliver high quality solutions that define the market and 
-                      create competitive value and reliable advantage for customers worldwide.                    
+                      Our mission is to promote business growth for our customers through creative
+                      design and development and deliver high quality solutions that define the market and
+                      create competitive value and reliable advantage for customers worldwide.
                     </p>
                   </div>
                 </li>
@@ -224,7 +241,7 @@
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                       It is one of the leading software companies that helps other organizations become digital organizations.
-                      It sets you apart from competitors in the market and provides better engagement with customers, partners and employees.                    </p>
+                      It sets you apart from competitors in the market and provides better engagement with customers, partners and employees. </p>
                   </div>
                 </li>
 
@@ -233,9 +250,9 @@
                   <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                     <p>
                       People do judge a book by its cover. We may have the best product,
-                      the highest quality, the most useful software, etc, if we present them in a slipshod manner, 
-                      they will be perceived as slipshod. If we present them in a creative, professional manner, 
-                      we will impute the desired qualities.                    
+                      the highest quality, the most useful software, etc, if we present them in a slipshod manner,
+                      they will be perceived as slipshod. If we present them in a creative, professional manner,
+                      we will impute the desired qualities.
                     </p>
                   </div>
                 </li>
@@ -244,10 +261,10 @@
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>03</span> Our Strategy <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
                     <p>
-                      Over the past years, we have studied companies that have achieved breakthroughs in 
-                      achievement and hundreds of customers through research and studies and have adopted 
-                      all associated tools to help us better reach that strategy for our customers and guide and 
-                      monitor the implementation of that strategy with our employees.                 
+                      Over the past years, we have studied companies that have achieved breakthroughs in
+                      achievement and hundreds of customers through research and studies and have adopted
+                      all associated tools to help us better reach that strategy for our customers and guide and
+                      monitor the implementation of that strategy with our employees.
                     </p>
                   </div>
                 </li>
@@ -275,7 +292,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-laptop"></i></div>
-              <h4><a >Web Development</a></h4>
+              <h4><a>Web Development</a></h4>
               <p>We carry more than just good coding skills. Our experience makes us stand out from other web development.</p>
             </div>
           </div>
@@ -283,7 +300,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-mobile"></i></div>
-              <h4><a >Mobile Development</a></h4>
+              <h4><a>Mobile Development</a></h4>
               <p>Create complex enterprise software, ensure reliable software integration, modernise your legacy system.</p>
             </div>
           </div>
@@ -291,7 +308,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="fa fa-palette"></i></div>
-              <h4><a > UI/UX Design </a></h4>
+              <h4><a> UI/UX Design </a></h4>
               <p>Build the product you need on time with an experienced team that uses a clear and effective design.</p>
             </div>
           </div>
@@ -299,15 +316,15 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
-              <h4><a >QA & Testing</a></h4>
-              <p>Turn to our experts to perform comprehensive, multi-stage testing and auditing of your software.</p>
+              <h4><a>QA & Testing</a></h4>
+              <p>Turn to our experts to perform comprehensive, Right Access-stage testing and auditing of your software.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-shopping-cart"></i></div>
-              <h4><a >ecommerce website </a></h4>
+              <h4><a>ecommerce website </a></h4>
               <p>Trust our top minds to eliminate workflow pain points, implement new tech, and consolidate app.</p>
             </div>
           </div>
@@ -315,7 +332,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="fab fa-opencart"></i></div>
-              <h4><a > OpenCart Stores </a></h4>
+              <h4><a> OpenCart Stores </a></h4>
               <p>Over the past decade, our customers succeeded by leveraging Intellectsoft’s process of building, motivating.</p>
             </div>
           </div>
@@ -325,102 +342,102 @@
       </div>
     </section><!-- End Services Section -->
 
-  
+
 
 
     <!-- ======= Portfolio Section ======= -->
 
-   <!-- </section> End Portfolio Section -->
+    <!-- </section> End Portfolio Section -->
 
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
-          <div class="container" data-aos="fade-up">
-    
-            <div class="section-title">
-              <h2>Portfolio</h2>
-              <p>Check our Portfolio</p>
-            </div>
-    
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-              <div class="col-lg-12 d-flex justify-content-center">
-                <ul id="portfolio-flters">
-                  <li data-filter="*" class="filter-active">All</li>
-                  <li data-filter=".filter-app">App</li>
-                  <li data-filter=".filter-card">Card</li>
-                  <li data-filter=".filter-web">Web</li>
-                </ul>
-              </div>
-            </div>
-    
-            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <p>App</p>
-                  <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="fas fa-plus"></i></a>
-                  <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Web 3</h4>
-                  <p>Web</p>
-                  <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="fas fa-plus"></i></a>
-                  <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 2</h4>
-                  <p>App</p>
-                  <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="fas fa-plus"></i></a>
-                  <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Card 2</h4>
-                  <p>Card</p>
-                  <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="fas fa-plus"></i></a>
-                  <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Web 2</h4>
-                  <p>Web</p>
-                  <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="fas fa-plus"></i></a>
-                  <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
-                </div>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>App</p>
-                  <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="fas fa-plus"></i></a>
-                  <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
-                </div>
-              </div>
-    
-            </div>
-    
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Check our Portfolio</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
           </div>
-        </section><!-- End Portfolio Section -->
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="fas fa-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="fas fa-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="fas fa-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="fas fa-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="fas fa-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="fas fa-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
 
 
-            <!-- ======= Cta Section ======= -->
+    <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container" data-aos="zoom-in">
 
@@ -441,7 +458,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2> use  efficient Tech  </h2>
+          <h2> use efficient Tech </h2>
           <p>Technologies we use</p>
         </div>
 
@@ -449,98 +466,99 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-4 col-md-6 technologies-item " data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/1.png" class="img-fluid" alt="">
-          </div>  </div>
-
-          <div class="col-lg-4 col-md-6 technologies-item " data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/2.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/1.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item " data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/3.png" class="img-fluid" alt="" >
-              </div> 
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/2.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 technologies-item " data-aos="fade-up" data-aos-delay="200">
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/3.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item d" data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/4.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/4.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item  " data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/5.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/5.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item " data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/6.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/6.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item d" data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/7.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/7.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item d" data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/8.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/8.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item " data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/9.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/9.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item " data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/10.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/10.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item " data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/11.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/11.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item " data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/12.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/12.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item " data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/13.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/13.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item " data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/14.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/14.png" class="img-fluid" alt="">
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 technologies-item " data-aos="fade-up" data-aos-delay="200">
-            <div class="imageee text-center" >
-            <img src="assets/img/portfolio/15.png" class="img-fluid" alt="">
-              </div>
+            <div class="imageee text-center">
+              <img src="assets/img/portfolio/15.png" class="img-fluid" alt="">
+            </div>
           </div>
 
         </div>
 
       </div>
-</section>
+    </section>
     <!-- end technologies section -->
 
     <!-- ======= Contact Section ======= -->
@@ -647,15 +665,15 @@
             </ul>
           </div>
 
-          <div class="col-lg-2 col-md-6 footer-links" >
-            <h4>Our Services</h4> 
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Our Services</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Mobile Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">  UI/UX Design </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> UI/UX Design </a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">QA & Testing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> ecommerce website </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> OpenCart Stores  </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> OpenCart Stores </a></li>
             </ul>
           </div>
 
@@ -694,6 +712,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
 
 </body>
 
