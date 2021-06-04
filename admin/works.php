@@ -7,17 +7,6 @@ if (!(isset($_COOKIE['admin']))) {
 
 include 'connect.php';
 
-// delete a meeting
-
-if (isset($_GET['delete'])) {
-
-    $stmt = $con->prepare("DELETE FROM `meetings` WHERE `meetings`.`id` = :id");
-    $stmt->bindParam(":id", $_GET['delete']);
-    $stmt->execute();
-    $count = $stmt->rowCount();
-    header('location: meeting.php');
-}
-
 ?>
 
 
@@ -106,13 +95,13 @@ if (isset($_GET['delete'])) {
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="meeting.php">
+                            <a class="nav-link" href="meeting.php">
                                 <span data-feather="file"></span>
                                 المواعيد
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="works.php">
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="works.php">
                                 <span data-feather="work"></span>
                                 الأعمال
                             </a>
@@ -140,27 +129,22 @@ if (isset($_GET['delete'])) {
                 </div>
             </nav>
 
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 text-end">
-                <a href="meeting.php" style="color: #000; text-decoration: none;">
-                    <h2>المواعيد</h2>
-                </a>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 text-center">
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>
                             <tr>
-                                <th>حذف الموعد</th>
-                                <th>تفاصيل العميل</th>
-                                <th>تفاصيل المشروع</th>
-                                <th>المشروع</th>
+                                <th>تفاصيل</th>
+                                <th>رابط المشروع</th>
                                 <th>العميل</th>
-                                <th>الساعة</th>
-                                <th>التاريخ</th>
+                                <th>التصنيف</th>
                             </tr>
                         </thead>
                         <tbody>
 
                             <?php
-                            $stmt = $con->prepare("SELECT * FROM meetings ORDER BY id DESC");
+
+                            $stmt = $con->prepare("SELECT * FROM portfolio ORDER BY id DESC ");
                             $stmt->execute();
                             $count = $stmt->rowCount();
                             if ($count > 0) {
@@ -168,45 +152,21 @@ if (isset($_GET['delete'])) {
 
                                 // the loop 
                                 foreach ($rows as $row) {
-                                    // user info
-
-                                    $stmt = $con->prepare("SELECT * FROM users WHERE id = ?");
-                                    $stmt->execute(array($row['user_id']));
-                                    $users = $stmt->fetchAll();
-
-                                    foreach ($users as $user) {
-                                        $user_name = $user['name'];
-                                        $user_email = $user['email'];
-                                    }
-
-                                    // get project name 
-
-                                    $stmt = $con->prepare("SELECT name FROM projects WHERE id = ?");
-                                    $stmt->execute(array($row['project_id']));
-                                    $projects = $stmt->fetchAll();
-
-                                    foreach ($projects as $project) {
-                                        $project_name = $project['name'];
-                                    }
-
-
                                     echo '
                                     <tr>
-                                    <td><a href="meeting.php?delete=' . $row['id'] . '"><div class="btn btn-danger">حذف الموعد</div></a></td>
-                                    <td><a href="index.php?info=' . $row['user_id'] . '"><div class="btn btn-success">عرض تفاصيل العميل</div></a></td>
-                                    <td><a href="project.php?id=' . $row['user_id'] . '"><div class="btn btn-primary">عرض تفاصيل المشروع</div></a></td>
-                                    <td> ' . $project_name . '</td>
-                                    <td>' . $user_name . '</td>
-                                    <td>' . $row['hour'] . '</td>
-                                    <td>' . $row['date'] . '</td>
+                                    <td><a href="edit_work.php?id=' . $row['id'] . '"><div class="btn btn-warning"> تفاصيل العمل</div></a></td>
+                                    <td> <a href="' . $row['link'] . '" target="_blank">' . $row['link'] . '</a></td>
+                                    <td>' . $row['client'] . '</td>
+                                    <td>' . $row['catagory'] . '</td>
                                     </tr>
                                     ';
                                 }
                             } else {
                                 echo '<br>
-                                        <h3 class="alert-info text-center">  لا يوجد مواعيد </h3>
-                                        <br>';
+                                <h3 class="alert-info text-center">  لا يوجد عملاء </h3>
+                                <br>';
                             }
+
 
 
                             ?>

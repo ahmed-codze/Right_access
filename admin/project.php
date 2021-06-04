@@ -13,11 +13,12 @@ include 'connect.php';
 
 if (isset($_POST['date'])) {
 
-    $stmt = $con->prepare('INSERT INTO meetings (user_id, project_id, date) VALUES (:user, :project, :date)');
+    $stmt = $con->prepare('INSERT INTO meetings (user_id, project_id, date, hour) VALUES (:user, :project, :date, :hour)');
     $stmt->execute(array(
         'user' => $_POST['user_id'],
         'project' => $_POST['project_id'],
         'date'   => $_POST['date'],
+        'hour'   => $_POST['hour']
     ));
     echo "<script> alert('تم اضافة موعد جديد'); </script>";
     header('location: project.php?id=' . $_POST['user_id']);
@@ -137,15 +138,15 @@ if (isset($_GET['delete'])) {
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="shopping-cart"></span>
-                                Products
+                            <a class="nav-link" href="works.php">
+                                <span data-feather="work"></span>
+                                الأعمال
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="add_work.php">
                                 <span data-feather="users"></span>
-                                Customers
+                                اضافة عمل جديد
                             </a>
                         </li>
                         <li class="nav-item">
@@ -218,13 +219,16 @@ if (isset($_GET['delete'])) {
                                     </a>
                                     <form action="project.php" method="POST" style="display: none; margin: 15px 0;" class="meeting">
                                     <div class="row">
-                                        <div class="col-9">
-                                            <input type="text" class="form-control" name="date" placeholder="day-month-year" />
+                                        <div class="col-6">
+                                            <input type="text" class="form-control" name="date" placeholder="3-5-2021" required/>
+                                        </div>
+                                        <div class="col-6">
+                                        <input type="text" class="form-control" name="hour" placeholder="10:30AM" required/>
                                         </div>
                                         <input type="text" hidden name="user_id" value="' . $row['user_id']  . '">
                                         <input type="text" hidden name="project_id" value="' . $row['id'] . '">
-                                        <div class="col-3">
-                                            <input type="submit" value="اضافة" class="btn btn-success">
+                                        <div class="col-12" style="margin-top: 10px;">
+                                            <input type="submit" value="اضافة" class="btn btn-success w-50">
                                         </div>
                                     </div>
                                 </form>

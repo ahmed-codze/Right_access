@@ -28,7 +28,7 @@ if (isset($_POST['login'])) {
     }
 
     setcookie("user", $user_key, time() + 3600 * 24 * 90, "/");
-    header("location: profile.php?user=" . $user_key);
+    header("location: profile.php");
     exit();
   } else {
     $head_message = '<h3 class="alert-danger text-center">Please, Check your data</h3>';

@@ -1,3 +1,24 @@
+<?Php
+
+include 'admin/connect.php';
+
+$name = '';
+$email = '';
+
+
+if (isset($_COOKIE['user'])) {
+
+  $stmt = $con->prepare("SELECT * FROM users WHERE user_key = ?");
+  $stmt->execute(array($_COOKIE['user']));
+  $rows = $stmt->fetchAll();
+  foreach ($rows as $row) {
+    $name = $row['name'];
+    $email = $row['email'];
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +79,7 @@
 
           if (isset($_COOKIE['user'])) {
             echo '
-  <li><a class="nav-link scrollto" href="profile.php?user=' . $_COOKIE['user'] . '">Profile</a></li>
+  <li><a class="nav-link scrollto" href="profile.php">Profile</a></li>
   <li><a class="nav-link scrollto " href="login.php?logout=true">log out</a></li>
 
   ';
@@ -153,7 +174,7 @@
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Engitech is the partner of choice for many of the world’s leading enterprises,
+              Right Access is the partner of choice for many of the world’s leading enterprises,
               SMEs and technology challengers. We help businesses elevate their value through
               custom software development, product design, QA and consultancy services.
             </p>
@@ -604,10 +625,10 @@
             <form action="" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="name" value="<?php echo $name; ?>" placeholder="Your Name" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" id="email" value="<?php echo $email; ?>" placeholder="Your Email" required>
                 </div>
               </div>
               <div class="form-group mt-3">

@@ -6,45 +6,40 @@ if (!isset($_COOKIE['user'])) {
 
 include 'admin/connect.php';
 
-if (isset($_GET['user'])) {
-
-  $user_key = filter_var($_GET['user'], FILTER_SANITIZE_STRING);
+$user_key = filter_var($_COOKIE['user'], FILTER_SANITIZE_STRING);
 
 
-  // check if user exist 
+// check if user exist 
 
-  $stmt = $con->prepare("SELECT user_key FROM users WHERE user_key = ?");
+$stmt = $con->prepare("SELECT user_key FROM users WHERE user_key = ?");
+$stmt->execute(array($user_key));
+$count = $stmt->rowCount();
+
+if ($count > 0) {
+
+  // get user info
+
+  $stmt = $con->prepare("SELECT * FROM users WHERE user_key = ?");
   $stmt->execute(array($user_key));
-  $count = $stmt->rowCount();
+  $rows = $stmt->fetchAll();
 
-  if ($count > 0) {
+  foreach ($rows as $row) {
+    $name = $row['name'];
+    $email = $row['email'];
+    $phone = $row['phone'];
+    $user_id = $row['id'];
+    $user_img = $row['img'];
 
-    // get user info
+    // get fist name 
 
-    $stmt = $con->prepare("SELECT * FROM users WHERE user_key = ?");
-    $stmt->execute(array($user_key));
-    $rows = $stmt->fetchAll();
-
-    foreach ($rows as $row) {
-      $name = $row['name'];
-      $email = $row['email'];
-      $phone = $row['phone'];
-      $user_id = $row['id'];
-      $user_img = $row['img'];
-
-      // get fist name 
-
-      $name_arr = explode(" ", $name);
-      $first_name = $name_arr[0];
-    }
-  } else {
-    header('location: index.php');
-    exit();
+    $name_arr = explode(" ", $name);
+    $first_name = $name_arr[0];
   }
 } else {
-  header('location: index.php');
+  header('location: login.php');
   exit();
 }
+
 
 ?>
 
@@ -187,7 +182,7 @@ if (isset($_GET['user'])) {
               <hr>
               <div class="row">
                 <div class="col-sm-12">
-                  <a class="btn btn-info " href="edit_profile.php?user=<?php echo $_COOKIE['user'] ?>">Edit</a>
+                  <a class="btn btn-info " href="edit_profile.php">Edit</a>
                 </div>
               </div>
             </div>
@@ -245,9 +240,7 @@ if (isset($_GET['user'])) {
                     <p style="margin-left: 20px;"> ' . $row['dead_line'] .  ' </p>
                   </div>
                 </div>
-      
-                <div id="calendar"></div>
-              </div>
+                    </div>
       
             </div>
               ';
@@ -263,7 +256,33 @@ if (isset($_GET['user'])) {
       ?>
 
 
+      <div class="col-6" style="font-weight: bold; font-size: 16px; margin: 5px 20px;">
+        10-4-2021
+      </div>
+      <hr style="margin: 8px 0; height: 1.5px; background-color: #000; width: 88%;">
+      <div class="row" style=" margin: 5px 20px;">
+        <div class="col-3">
+          10:30AM
+        </div>
+        <div class="col-9">
+          <span>.</span>meeting
+        </div>
+        <hr style="margin: 8px -15px; height: 1.5px; background-color: #000; width: 95%;">
+      </div>
 
+      <div class="col-6" style="font-weight: bold; font-size: 16px; margin: 5px 20px;">
+        10-4-2021
+      </div>
+      <hr style="margin: 8px 0; height: 1.5px; background-color: #000; width: 88%;">
+      <div class="row" style=" margin: 5px 20px;">
+        <div class="col-3">
+          10:30AM
+        </div>
+        <div class="col-9">
+          <span style="width: 15px;height: 15px;display: inline-block;background-color: #4154f1;border-radius: 50%;margin: 0 10px;line-height: 0.75;">.</span>meeting
+        </div>
+        <hr style="margin: 8px -15px; height: 1.5px; background-color: #000; width: 95%;">
+      </div>
 
 
 

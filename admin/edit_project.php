@@ -134,15 +134,15 @@ if (isset($_POST['add_project'])) {
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="shopping-cart"></span>
-                                Products
+                            <a class="nav-link" href="works.php">
+                                <span data-feather="work"></span>
+                                الأعمال
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="add_work.php">
                                 <span data-feather="users"></span>
-                                Customers
+                                اضافة عمل جديد
                             </a>
                         </li>
                         <li class="nav-item">

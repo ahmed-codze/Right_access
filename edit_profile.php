@@ -6,46 +6,33 @@ if (!isset($_COOKIE['user'])) {
 
 include 'admin/connect.php';
 
-if (isset($_GET['user'])) {
+$user_key = filter_var($_COOKIE['user'], FILTER_SANITIZE_STRING);
 
-    $user_key = filter_var($_GET['user'], FILTER_SANITIZE_STRING);
+// check if user exist 
 
+$stmt = $con->prepare("SELECT user_key FROM users WHERE user_key = ?");
+$stmt->execute(array($user_key));
+$count = $stmt->rowCount();
 
-    // check if he is the owner 
+if ($count > 0) {
 
-    if (!($user_key === $_COOKIE['user'])) {
-        header('location: login.php');
-        exit();
-    }
+    // get user info
 
-    // check if user exist 
-
-    $stmt = $con->prepare("SELECT user_key FROM users WHERE user_key = ?");
+    $stmt = $con->prepare("SELECT * FROM users WHERE user_key = ?");
     $stmt->execute(array($user_key));
-    $count = $stmt->rowCount();
+    $rows = $stmt->fetchAll();
 
-    if ($count > 0) {
-
-        // get user info
-
-        $stmt = $con->prepare("SELECT * FROM users WHERE user_key = ?");
-        $stmt->execute(array($user_key));
-        $rows = $stmt->fetchAll();
-
-        foreach ($rows as $row) {
-            $name = $row['name'];
-            $email = $row['email'];
-            $phone = $row['phone'];
-            $img = $row['img'];
-        }
-    } else {
-        header('location: index.php');
-        exit();
+    foreach ($rows as $row) {
+        $name = $row['name'];
+        $email = $row['email'];
+        $phone = $row['phone'];
+        $img = $row['img'];
     }
 } else {
-    header('location: index.php');
+    header('location: profile.php');
     exit();
 }
+
 
 if (isset($_POST['update'])) {
 
@@ -99,7 +86,7 @@ if (isset($_POST['update'])) {
             'key' => $user_key,
 
         ));
-        header('location: profile.php?user=' . $user_key);
+        header('location: profile.php');
         exit();
     }
 }
@@ -198,7 +185,7 @@ if (isset($_POST['update'])) {
 
     <main id="main">
         <section style="margin-top: -5em;" class="container">
-            <form action="edit_profile.php?user=<?php echo $user_key; ?>" method="POST" class="form-group" enctype="multipart/form-data">
+            <form action="edit_profile.php" method="POST" class="form-group" enctype="multipart/form-data">
                 <div class="row">
 
                     <div class="col-md-6">
