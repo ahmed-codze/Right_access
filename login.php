@@ -171,7 +171,7 @@ if (isset($_GET['logout'])) {
                       <input type="password" name="pass" id="loginPassword" required>
                     </div>
 
-                    <div class="CTA">
+                    <div class="CTAA">
                       <input type="submit" value="Login" name="login">
                       <br>
                       <br>
@@ -215,7 +215,7 @@ if (isset($_GET['logout'])) {
                       <span class="error"></span>
                     </div>
 
-                    <div class="CTA">
+                    <div class="CTAA">
                       <input type="submit" value="Signup Now" id="submit">
                       <br>
                       <br>

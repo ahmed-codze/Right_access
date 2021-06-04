@@ -69,10 +69,6 @@ if ($count > 0) {
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/font awesome/all.min.css" rel="stylesheet" />
 
-  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.7.0/main.css' rel='stylesheet' />
-  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.7.0/main.js'></script>
-
-
   <!--  Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/profile.css" rel="stylesheet">
@@ -96,7 +92,6 @@ if ($count > 0) {
       <!-- Uncomment below if you prefer to use an image logo -->
       <a href="index.php" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
 
-      <nav id="navbar" class="navbar">
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link scrollto " href="index.php">Home</a></li>
@@ -378,107 +373,6 @@ if ($count > 0) {
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar');
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        themeSystem: 'bootstrap',
-        initialView: 'listMonth',
-        headerToolbar: {
-          left: 'prev,next',
-          center: 'title',
-          right: 'listMonth'
-        },
-        events: [{ // this object will be "parsed" into an Event Object
-            title: 'meating', // a property!
-            start: '2021-06-04T10:00:00', // a property!
-            end: '2021-06-04T15:00:00', // a property! ** see important note below about 'end' **
-
-          },
-
-          { // this object will be "parsed" into an Event Object
-            title: 'metting', // a property!
-            start: '2021-06-12T15:00:00', // a property!
-            end: '2021-06-12T20:00:00', // a property! ** see important note below about 'end' **
-          }
-
-        ]
-
-      });
-      calendar.render();
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar2');
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        themeSystem: 'bootstrap',
-        initialView: 'listMonth',
-        headerToolbar: {
-          left: 'prev,next',
-          center: 'title',
-          right: 'listMonth'
-        },
-        events: [{ // this object will be "parsed" into an Event Object
-            title: 'meating', // a property!
-            start: '2021-06-10T12:00:00', // a property!
-            end: '2021-06-10T15:00:00', // a property! ** see important note below about 'end' **
-
-
-
-          },
-
-          { // this object will be "parsed" into an Event Object
-            title: 'confirance', // a property!
-            start: '2021-06-10T15:00:00', // a property!
-            end: '2021-06-10T20:00:00', // a property! ** see important note below about 'end' **
-          }
-
-        ]
-
-      });
-      calendar.render();
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar3');
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        themeSystem: 'bootstrap',
-        initialView: 'listMonth',
-        headerToolbar: {
-          left: 'prev,next',
-          center: 'title',
-          right: 'listMonth'
-        },
-        events: [{ // this object will be "parsed" into an Event Object
-            title: 'meating', // a property!
-            start: '2021-06-10T12:00:00', // a property!
-            end: '2021-06-10T15:00:00', // a property! ** see important note below about 'end' **
-            allDay: false,
-
-
-          },
-
-
-
-          { // this object will be "parsed" into an Event Object
-            title: 'metting', // a property!
-            start: '2021-06-12T15:00:00', // a property!
-            end: '2021-06-12T20:00:00', // a property! ** see important note below about 'end' **
-          },
-
-
-          { // this object will be "parsed" into an Event Object
-            title: 'metting', // a property!
-            start: '2021-06-20T15:00:00', // a property!
-            end: '2021-06-20T20:00:00', // a property! ** see important note below about 'end' **
-          }
-
-        ]
-
-      });
-      calendar.render();
-    });
-  </script>
 
 </body>
 

@@ -8,7 +8,7 @@ section#formHolder {
 
 .brand {
   padding: 20px;
-  background: url("/assets/img/why-us.jpg");
+  background: url("../img/why-us.jpg");
   background-size: cover;
   background-position: center center;
   color: #fff;
@@ -192,10 +192,10 @@ section#formHolder {
   display: none;
 }
 
-.form form .CTA {
+.form form .CTAA {
   margin-top: 30px;
 }
-.form form .CTA input {
+.form form .CTAA input {
   font-size: 16px;
   text-transform: uppercase;
   padding: 5px 30px;
@@ -206,7 +206,7 @@ section#formHolder {
   border: none;
   font-family: "Montserrat", sans-serif;
 }
-.form form .CTA a.switch {
+.form form .CTAA a.switch {
   font-size: 13px;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;

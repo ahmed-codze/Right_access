@@ -172,11 +172,11 @@ if (isset($_POST['update'])) {
         </div>
     </header><!-- End Header -->
     <style>
-        input {
+        main input {
             margin: 10px 0;
         }
 
-        label {
+        main label {
             margin-top: 10px;
         }
     </style>

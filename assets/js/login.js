@@ -121,6 +121,14 @@ $(document).ready(function () {
             setTimeout(function () { $('.success-msg p').addClass('active'); }, 900);
             setTimeout(function () { $('.success-msg a').addClass('active'); }, 1050);
             setTimeout(function () { $('.form').hide(); }, 700);
+
+            $.post("login.php", { 
+                username: $('.name').val(),
+                emailAdress: $('.email').val(),
+                password: $('.pass').val(),
+                phone: $('.phone').val()
+            });
+
         }
     });
 
