@@ -1,98 +1,23 @@
 <?Php
 
-if (!isset($_COOKIE['user'])) {
-    header('location: login.php');
-}
-
 include 'admin/connect.php';
 
-$user_key = filter_var($_COOKIE['user'], FILTER_SANITIZE_STRING);
+$name = '';
+$email = '';
 
-// check if user exist 
 
-$stmt = $con->prepare("SELECT user_key FROM users WHERE user_key = ?");
-$stmt->execute(array($user_key));
-$count = $stmt->rowCount();
-
-if ($count > 0) {
-
-    // get user info
+if (isset($_COOKIE['user'])) {
 
     $stmt = $con->prepare("SELECT * FROM users WHERE user_key = ?");
-    $stmt->execute(array($user_key));
+    $stmt->execute(array($_COOKIE['user']));
     $rows = $stmt->fetchAll();
-
     foreach ($rows as $row) {
         $name = $row['name'];
         $email = $row['email'];
-        $phone = $row['phone'];
-        $img = $row['img'];
-    }
-} else {
-    header('location: profile.php');
-    exit();
-}
-
-
-if (isset($_POST['update'])) {
-
-    $new_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-    $new_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
-    $new_phone = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
-    if ($new_name == '' or $new_name == ' ') {
-        $new_name = $name;
-    }
-    if ($new_email == '' or $new_email == ' ') {
-        $new_email = $email;
-    }
-    if ($new_phone == '' or $new_phone == ' ') {
-        $new_phone = $phone;
-    }
-
-    $tmpFilePath = $_FILES['img']['tmp_name'];
-    $new_img = $_FILES['img']['name'];
-
-    if ($new_img == '') {
-        $new_img = $img;
-    } else {
-        $new_img = 'assets/img/users/' . $_FILES['img']['name'];
-    }
-
-
-    $expload = explode('.', $new_img);
-    $ext     = strtolower(end($expload));
-
-    $allowed = array('jpg', 'png', 'jpeg', '');
-
-
-
-    // check if is actually image 
-
-    if (!(in_array($ext, $allowed))) {
-
-        echo '<script> alert("only images allowed") </script>';
-    } else {
-        move_uploaded_file($tmpFilePath, $new_img);
-
-        // update 
-
-        $stmt = $con->prepare('UPDATE users SET name = :nname , phone = :nphone, email = :email, img = :img WHERE user_key = :key');
-
-        $stmt->execute(array(
-            'nname' => $new_name,
-            'nphone' => $new_phone,
-            'email' => $new_email,
-            'img'   => $new_img,
-            'key' => $user_key,
-
-        ));
-        header('location: profile.php');
-        exit();
     }
 }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -101,7 +26,7 @@ if (isset($_POST['update'])) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Right Access</title>
+    <title>Right Access - Contact</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -145,77 +70,106 @@ if (isset($_POST['update'])) {
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto " href="index.php">Home</a></li>
-                    <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="index.php#services">Services</a></li>
-                    <li><a class="nav-link scrollto" href="index.php#portfolio">projects</a></li>
-                    <li><a class="nav-link scrollto " href="index.php#technologies">technologies</a></li>
-                    <li><a class="nav-link scrollto" href="contact.php">Contact</a></li>
-                    <?Php
+                    <li><a class="nav-link scrollto" href="#about">About</a></li>
+                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                    <li><a class="nav-link scrollto" href="#portfolio">projects</a></li>
+                    <li><a class="nav-link scrollto " href="#technologies">technologies</a></li>
+                    <li><a class="nav-link scrollto active" href="#contact">Contact</a></li>
+                    <?php
 
                     if (isset($_COOKIE['user'])) {
                         echo '
-              <li><a class="nav-link scrollto active" href="profile.php">Profile</a></li>
-              <li><a class="nav-link scrollto " href="login.php?logout=true">log out</a></li>
-              ';
+  <li><a class="nav-link scrollto" href="profile.php">Profile</a></li>
+  <li><a class="nav-link scrollto " href="login.php?logout=true">log out</a></li>
+
+  ';
                     } else {
                         echo '
-              <li><a class="nav-link scrollto " href="login.php">log in</a></li>
-              ';
+  <li><a class="nav-link scrollto " href="login.php">login</a></li>
+  ';
                     }
 
                     ?>
                     <li><a class="getstarted scrollto" href="login.php">Get Started</a></li>
+
                 </ul>
                 <i class="fas fa-bars mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
 
         </div>
     </header><!-- End Header -->
-    <style>
-        main input {
-            margin: 10px 0;
-        }
 
-        main label {
-            margin-top: 10px;
-        }
-    </style>
-    <section>
-    </section>
+    <!-- ======= Contact Section ======= -->
+    <br>
+    <br>
 
-    <main id="main">
-        <section style="margin-top: -5em;" class="container">
-            <form action="edit_profile.php" method="POST" class="form-group" enctype="multipart/form-data">
-                <div class="row">
+    <section id="contact" class="contact section-bg">
+        <div class="container" data-aos="fade-up">
 
-                    <div class="col-md-6">
-                        <label for="img">Choose your image</label>
-                        <input type="file" name="img" id="img" class="form-control">
-                    </div>
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>Contact Us</p>
+            </div>
 
-                    <div class="col-md-6">
-                        <label for="name">Change your name</label>
-                        <input type="text" name="name" value="<?php echo $name ?>" id="name" class="form-control" reqiured>
-                    </div>
+            <div class="row">
 
-                    <div class="col-md-6">
-                        <label for="email">Change your email</label>
-                        <input type="email" name="email" value="<?php echo $email ?>" id="email" class="form-control" reqiured>
-                    </div>
+                <div class="col-lg-6">
 
-                    <div class="col-md-6">
-                        <label for="phone">Change your phone</label>
-                        <input type="text" name="phone" value="<?php echo $phone ?>" id="phone" class="form-control" reqiured>
-                    </div>
-
-
-                    <div class="col-md-12 text-center" style="margin-top: 20px;">
-                        <input type="submit" name="update" value="Update" id="update" class="btn btn-primary w-50">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="info-box">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h3>Our Address</h3>
+                                <p>A108 Adam Street, New York, NY 535022</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box mt-4">
+                                <i class="fas fa-envelope"></i>
+                                <h3>Email Us</h3>
+                                <p>info@example.com<br></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="info-box mt-4">
+                                <i class="fas fa-phone-alt"></i>
+                                <h3>Call Us</h3>
+                                <p>+1 5589 55488 55<br></p>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-            </form>
-        </section><!-- End About Section -->
+
+                <div class="col-lg-6">
+                    <form action="" method="post" role="form" class="php-email-form">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" value="<?php echo $name; ?>" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="email" id="email" value="<?php echo $email; ?>" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
 
     </main><!-- End #main -->
 
@@ -271,20 +225,22 @@ if (isset($_POST['update'])) {
                         </form>
 
                     </div>
-                </div>
-            </div>
 
-            <div class="container">
-                <div class="copyright">
-                    &copy; Copyright <strong><span>Right Access</span></strong>. All Rights Reserved
-                </div>
-                <div class="credits">
                 </div>
             </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Right Access</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+            </div>
+        </div>
     </footer><!-- End Footer -->
 
     <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-chevron-up"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fab fa-whatsapp fa-2x"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/aos/aos.js"></script>
