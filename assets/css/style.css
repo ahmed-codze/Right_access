@@ -955,6 +955,12 @@ section {
   margin: 10px;
 }
 
+.swiper-wrapper{
+  height: 140px;
+}
+.swiper-img{
+  width: 100px;
+}
 
 
 /* end clients */
