@@ -95,7 +95,7 @@ if (isset($_GET['client'])) {
             <li><a class="nav-link scrollto active" href="index.php#portfolio">projects</a></li>
             <li><a class="nav-link scrollto " href="index.php#technologies">technologies</a></li>
             <li><a class="nav-link scrollto " href="profile.php">Profile</a></li>
-            <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
+            <li><a class="nav-link scrollto" href="contact.php">Contact</a></li>
             <?php
 
             if (isset($_COOKIE['user'])) {

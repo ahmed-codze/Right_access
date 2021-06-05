@@ -7,6 +7,19 @@ if (!(isset($_COOKIE['admin']))) {
 
 include 'connect.php';
 
+// delete work 
+
+if (isset($_GET['delete'])) {
+    $stmt = $con->prepare("DELETE FROM `portfolio` WHERE `portfolio`.`id` = :id");
+    $stmt->bindParam(":id", $_GET['delete']);
+    $stmt->execute();
+    $count = $stmt->rowCount();
+    if ($count > 0) {
+        echo "<script> alert('you have delete it') </script>";
+        header('location: works.php');
+    }
+}
+
 ?>
 
 
@@ -134,7 +147,7 @@ include 'connect.php';
 
                             <?php
 
-                            $stmt = $con->prepare("SELECT * FROM portfolio ORDER BY id DESC ");
+                            $stmt = $con->prepare("SELECT * FROM portfolio ORDER BY id DESC");
                             $stmt->execute();
                             $count = $stmt->rowCount();
                             if ($count > 0) {
@@ -145,6 +158,7 @@ include 'connect.php';
 
                                     echo '
                                     <tr>
+                                    <td><a href="works.php?delete=' . $row['id'] . '"><div class="btn btn-danger"> حذف العمل</div></a></td>
                                     <td><a href="edit_work.php?id=' . $row['id'] . '"><div class="btn btn-warning"> تفاصيل العمل</div></a></td>
                                     ';
 
@@ -166,7 +180,7 @@ include 'connect.php';
                                 }
                             } else {
                                 echo '<br>
-                                <h3 class="alert-info text-center">  لا يوجد عملاء </h3>
+                                <h3 class="alert-info text-center">  لا يوجد اعمال </h3>
                                 <br>';
                             }
 

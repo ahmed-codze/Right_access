@@ -99,7 +99,7 @@ if ($count > 0) {
           <li><a class="nav-link scrollto" href="index.php#services">Services</a></li>
           <li><a class="nav-link scrollto" href="index.php#portfolio">projects</a></li>
           <li><a class="nav-link scrollto " href="index.php#technologies">technologies</a></li>
-          <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="contact.php">Contact</a></li>
           <?Php
 
           if (isset($_COOKIE['user'])) {
