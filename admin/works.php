@@ -112,18 +112,7 @@ include 'connect.php';
                                 اضافة عمل جديد
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="bar-chart-2"></span>
-                                Reports
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="layers"></span>
-                                Integrations
-                            </a>
-                        </li>
+
                     </ul>
 
                 </div>
@@ -140,6 +129,7 @@ include 'connect.php';
                                 <th>التصنيف</th>
                             </tr>
                         </thead>
+
                         <tbody>
 
                             <?php
@@ -152,10 +142,23 @@ include 'connect.php';
 
                                 // the loop 
                                 foreach ($rows as $row) {
+
                                     echo '
                                     <tr>
                                     <td><a href="edit_work.php?id=' . $row['id'] . '"><div class="btn btn-warning"> تفاصيل العمل</div></a></td>
-                                    <td> <a href="' . $row['link'] . '" target="_blank">' . $row['link'] . '</a></td>
+                                    ';
+
+                                    if ($row['en_catagory'] == 'Apps') {
+                                        echo '
+                                        <td> <a href="' . $row['ios_link'] . '" target="_blank">رابط ios</a>&nbsp; &nbsp; &nbsp; 
+                                        <a href="' . $row['android_link'] . '" target="_blank">رابط اندرويد</a></td>
+                                        ';
+                                    } else {
+                                        echo '
+                                        <td> <a href="' . $row['link'] . '" target="_blank">' . $row['link'] . '</a></td>
+                                        ';
+                                    }
+                                    echo '
                                     <td>' . $row['client'] . '</td>
                                     <td>' . $row['catagory'] . '</td>
                                     </tr>

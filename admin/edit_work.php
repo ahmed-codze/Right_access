@@ -23,6 +23,8 @@ if (isset($_GET['id'])) {
         $first_img = $row['first_img'];
         $sec_img = $row['sec_img'];
         $third_img = $row['third_img'];
+        $android_link = $row['android_link'];
+        $ios_link = $row['ios_link'];
     }
 } else {
     header('location: index.php');
@@ -71,12 +73,13 @@ if (isset($_POST['link'])) {
     $new_encat = $_POST['en_catagory'];
     $new_desc = $_POST['description'];
     $new_endesc = $_POST['en_description'];
-
+    $new_android = $_POST['android_link'];
+    $new_ios = $_POST['ios_link'];
     $work_id = $_GET['id'];
 
     $stmt = $con->prepare('UPDATE portfolio SET first_img = :fimg , sec_img = :simg, third_img = :thimg,
                                 link = :link, client = :client, en_client = :enclient, catagory = :cat, en_catagory = :encat,
-                                description = :des, en_description = :endes   WHERE id = :id');
+                                description = :des, en_description = :endes, android_link = :android, ios_link = :ios  WHERE id = :id');
 
     $stmt->execute(array(
         'fimg' => $fImg,
@@ -89,6 +92,8 @@ if (isset($_POST['link'])) {
         'encat' => $new_encat,
         'des' => $new_desc,
         'endes' => $new_endesc,
+        'android' => $new_android,
+        'ios' => $new_ios,
         'id' => $work_id
     ));
 
@@ -211,18 +216,7 @@ if (isset($_POST['link'])) {
                                 اضافة عمل جديد
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="bar-chart-2"></span>
-                                Reports
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="layers"></span>
-                                Integrations
-                            </a>
-                        </li>
+
                     </ul>
 
                 </div>
@@ -237,9 +231,19 @@ if (isset($_POST['link'])) {
                             <input type="file" name="upload[]" class="form-control" multiple>
                         </div>
                         <div class="col-md-6">
-                            <label for="link">رابط العمل</label>
+                            <label for="link">رابط الموقع</label>
                             <br>
                             <input type="text" name="link" class="form-control" placeholder="link" value="<?Php echo $link; ?>">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="link">رابط الاندرويد</label>
+                            <br>
+                            <input type="text" name="android_link" class="form-control" placeholder="link" value="<?Php echo $android_link; ?>">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="link">رابط ios</label>
+                            <br>
+                            <input type="text" name="ios_link" class="form-control" placeholder="link" value="<?Php echo $ios_link; ?>">
                         </div>
                         <div class="col-md-6">
                             <label for="catagory">القسم</label>

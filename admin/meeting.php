@@ -123,18 +123,7 @@ if (isset($_GET['delete'])) {
                                 اضافة عمل جديد
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="bar-chart-2"></span>
-                                Reports
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="layers"></span>
-                                Integrations
-                            </a>
-                        </li>
+
                     </ul>
 
                 </div>
@@ -153,6 +142,7 @@ if (isset($_GET['delete'])) {
                                 <th>تفاصيل المشروع</th>
                                 <th>المشروع</th>
                                 <th>العميل</th>
+                                <th>حول</th>
                                 <th>الساعة</th>
                                 <th>التاريخ</th>
                             </tr>
@@ -197,6 +187,7 @@ if (isset($_GET['delete'])) {
                                     <td><a href="project.php?id=' . $row['user_id'] . '"><div class="btn btn-primary">عرض تفاصيل المشروع</div></a></td>
                                     <td> ' . $project_name . '</td>
                                     <td>' . $user_name . '</td>
+                                    <td style="color:' . $row['color'] . '; font-weight: bold">' . $row['about'] . '</td>
                                     <td>' . $row['hour'] . '</td>
                                     <td>' . $row['date'] . '</td>
                                     </tr>

@@ -108,7 +108,7 @@ if (isset($_COOKIE['user'])) {
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
+        <div class="carousel-item active" style="background-image: url(assets/img/slide/right_access-1.jpg)">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Right Access</span></h2>
@@ -118,7 +118,7 @@ if (isset($_COOKIE['user'])) {
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
+        <div class="carousel-item" style="background-image: url(assets/img/slide/right_access-2.jpg)">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">POWERFUL DIGITAL SOLUTIONS</h2>
@@ -128,7 +128,7 @@ if (isset($_COOKIE['user'])) {
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
+        <div class="carousel-item" style="background-image: url(assets/img/slide/right_access-3.jpg)">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">Your Partner for Software Innovation</h2>
@@ -300,6 +300,7 @@ if (isset($_COOKIE['user'])) {
       </div>
     </section><!-- End Why Us Section -->
 
+
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container" data-aos="fade-up">
@@ -383,74 +384,42 @@ if (isset($_COOKIE['user'])) {
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-Apps">Apps</li>
+              <li data-filter=".filter-Websites">Websites</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="fas fa-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
-            </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="fas fa-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
-            </div>
-          </div>
+          <?php
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="fas fa-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
-            </div>
-          </div>
+          $stmt = $con->prepare("SELECT * FROM portfolio");
+          $stmt->execute();
+          $rows = $stmt->fetchAll();
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="fas fa-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
-            </div>
-          </div>
+          // the loop 
+          foreach ($rows as $row) {
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
+            echo '
+            <div class="col-lg-4 col-md-6 portfolio-item filter-' . $row['en_catagory'] . '">
+            <img src="assets/img/portfolio/' . $row['first_img'] . '" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="fas fa-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
+              <h4>' . $row['en_client'] . '</h4>
+              <p>' . $row['en_catagory'] . '</p>
+              <a href="assets/img/portfolio/' . $row['sec_img'] . '" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="fas fa-plus"></i></a>
+              <a href="portfolio-details.php?client=' . $row['en_client'] . '" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
             </div>
           </div>
+            ';
+          }
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/شاورما-موك-720x520.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/3818-720x720.gif" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="fas fa-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="fas fa-link"></i></a>
-            </div>
-          </div>
+
+          ?>
+
+
+
 
         </div>
 
@@ -720,7 +689,7 @@ if (isset($_COOKIE['user'])) {
   </footer><!-- End Footer -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-chevron-up"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fab fa-whatsapp fa-2x"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>

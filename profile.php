@@ -92,32 +92,32 @@ if ($count > 0) {
       <!-- Uncomment below if you prefer to use an image logo -->
       <a href="index.php" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
 
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a class="nav-link scrollto " href="index.php">Home</a></li>
-            <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
-            <li><a class="nav-link scrollto" href="index.php#services">Services</a></li>
-            <li><a class="nav-link scrollto" href="index.php#portfolio">projects</a></li>
-            <li><a class="nav-link scrollto " href="index.php#technologies">technologies</a></li>
-            <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
-            <?Php
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="index.php">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.php#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="index.php#portfolio">projects</a></li>
+          <li><a class="nav-link scrollto " href="index.php#technologies">technologies</a></li>
+          <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
+          <?Php
 
-            if (isset($_COOKIE['user'])) {
-              echo '
+          if (isset($_COOKIE['user'])) {
+            echo '
               <li><a class="nav-link scrollto active" href="profile.php">Profile</a></li>
               <li><a class="nav-link scrollto " href="login.php?logout=true">log out</a></li>
               ';
-            } else {
-              echo '
+          } else {
+            echo '
               <li><a class="nav-link scrollto " href="login.php">log in</a></li>
               ';
-            }
+          }
 
-            ?>
-            <li><a class="getstarted scrollto" href="login.php">Get Started</a></li>
-          </ul>
-          <i class="fas fa-bars mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
+          ?>
+          <li><a class="getstarted scrollto" href="login.php">Get Started</a></li>
+        </ul>
+        <i class="fas fa-bars mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
@@ -213,6 +213,7 @@ if ($count > 0) {
         $rows = $stmt->fetchAll();
 
         foreach ($rows as $row) {
+          $project_id = $row['id'];
           echo '
               <div class="col-md-6" style="margin-bottom: 20px;">
               <div class="project-card">
@@ -234,12 +235,39 @@ if ($count > 0) {
                     <h3>dead line : </h3>
                     <p style="margin-left: 20px;"> ' . $row['dead_line'] .  ' </p>
                   </div>
-                </div>
-                    </div>
-      
-            </div>
-              ';
+                  </div>
+                  ';
+          $stmt = $con->prepare("SELECT * FROM meetings WHERE project_id = ?");
+          $stmt->execute(array($project_id));
+          $meetings = $stmt->fetchAll();
+
+          // the loop 
+          foreach ($meetings as $meeting) {
+            echo '
+                            <div class="col-6" style="font-weight: bold; font-size: 16px; margin: 5px 20px;">
+                            ' . $meeting['date'] .  '
+                          </div>
+                          <hr style="margin: 8px 0; height: 1.5px; background-color: #000; width: 88%;">
+                          <div class="row" style=" margin: 5px 20px;">
+                            <div class="col-3">
+                            ' . $meeting['hour'] .  '
+                            </div>
+                            <div class="col-9">
+                              <span style="width: 15px;height: 15px;display: inline-block;background-color: ' . $meeting['color'] .  ';border-radius: 50%;margin: 0 10px;line-height: 0.75;">.</span>
+                              ' . $meeting['about'] .  '
+                            </div>
+                            <hr style="margin: 8px -15px; height: 1.5px; background-color: #000; width: 89%;">
+                          </div>
+                                ';
+          }
+          echo '
+          </div>
+          </div>
+          ';
         }
+
+
+
 
         echo '
             
@@ -248,39 +276,9 @@ if ($count > 0) {
             ';
       }
 
+
+
       ?>
-
-
-      <div class="col-6" style="font-weight: bold; font-size: 16px; margin: 5px 20px;">
-        10-4-2021
-      </div>
-      <hr style="margin: 8px 0; height: 1.5px; background-color: #000; width: 88%;">
-      <div class="row" style=" margin: 5px 20px;">
-        <div class="col-3">
-          10:30AM
-        </div>
-        <div class="col-9">
-          <span>.</span>meeting
-        </div>
-        <hr style="margin: 8px -15px; height: 1.5px; background-color: #000; width: 95%;">
-      </div>
-
-      <div class="col-6" style="font-weight: bold; font-size: 16px; margin: 5px 20px;">
-        10-4-2021
-      </div>
-      <hr style="margin: 8px 0; height: 1.5px; background-color: #000; width: 88%;">
-      <div class="row" style=" margin: 5px 20px;">
-        <div class="col-3">
-          10:30AM
-        </div>
-        <div class="col-9">
-          <span style="width: 15px;height: 15px;display: inline-block;background-color: #4154f1;border-radius: 50%;margin: 0 10px;line-height: 0.75;">.</span>meeting
-        </div>
-        <hr style="margin: 8px -15px; height: 1.5px; background-color: #000; width: 95%;">
-      </div>
-
-
-
 
 
 

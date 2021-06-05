@@ -13,12 +13,15 @@ include 'connect.php';
 
 if (isset($_POST['date'])) {
 
-    $stmt = $con->prepare('INSERT INTO meetings (user_id, project_id, date, hour) VALUES (:user, :project, :date, :hour)');
+    $stmt = $con->prepare('INSERT INTO meetings (user_id, project_id, date, hour, about, color) 
+                                VALUES (:user, :project, :date, :hour, :about, :color)');
     $stmt->execute(array(
         'user' => $_POST['user_id'],
         'project' => $_POST['project_id'],
         'date'   => $_POST['date'],
-        'hour'   => $_POST['hour']
+        'hour'   => $_POST['hour'],
+        'about'  => $_POST['about'],
+        'color'  => $_POST['color']
     ));
     echo "<script> alert('تم اضافة موعد جديد'); </script>";
     header('location: project.php?id=' . $_POST['user_id']);
@@ -149,18 +152,7 @@ if (isset($_GET['delete'])) {
                                 اضافة عمل جديد
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="bar-chart-2"></span>
-                                Reports
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span data-feather="layers"></span>
-                                Integrations
-                            </a>
-                        </li>
+
                     </ul>
 
                 </div>
@@ -198,6 +190,8 @@ if (isset($_GET['delete'])) {
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" style="width: ' . $row['progress_num'] . '%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">' . $row['progress_num'] . '%</div>
                                 </div>
+                                <br>
+                                <strong>المرحلة</strong>: <span>' . $row['progress_name'] . '</span>
                                 <hr>
                                 <div class="date row ">
                                     <div class="col-6">
@@ -220,10 +214,18 @@ if (isset($_GET['delete'])) {
                                     <form action="project.php" method="POST" style="display: none; margin: 15px 0;" class="meeting">
                                     <div class="row">
                                         <div class="col-6">
-                                            <input type="text" class="form-control" name="date" placeholder="3-5-2021" required/>
+                                            <input type="date" class="form-control" name="date" placeholder="3-5-2021" required/>
                                         </div>
                                         <div class="col-6">
-                                        <input type="text" class="form-control" name="hour" placeholder="10:30AM" required/>
+                                        <input type="time" class="form-control" name="hour" placeholder="10:30AM" required/>
+                                        </div>
+                                        <div class="col-6">
+                                        <input type="text" class="form-control" name="about" placeholder="about" required/>
+                                        </div>
+                                        
+                                        <div class="col-6" style="margin-top: 2px;">
+                                        <label>اللون</label>
+                                        <input type="color" class="form-control" name="color" placeholder="color" required/>
                                         </div>
                                         <input type="text" hidden name="user_id" value="' . $row['user_id']  . '">
                                         <input type="text" hidden name="project_id" value="' . $row['id'] . '">

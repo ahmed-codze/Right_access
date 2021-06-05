@@ -37,7 +37,58 @@ if (isset($_POST['login'])) {
 
 // create account
 
-// logout
+if (isset($_POST['signup'])) {
+
+  $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+  $name  = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+  $pass  = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
+  $phone  = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
+
+  $stmt = $con->prepare("SELECT email FROM users WHERE email = ?");
+  $stmt->execute(array($email));
+  $count = $stmt->rowCount();
+  if ($count > 0) {
+    $head_message = '<h3 class="alert-info text-center">This Email is already exist, you can sign in</h3>';
+  } else {
+
+    // create custom key 
+
+    $check_key = 1;
+
+    while ($check_key = 1) {
+
+      $user_key = str_shuffle('d2c63a605ae27c13e43e26fe2c97a36c4556846dd3ef');
+
+      // check if key is exist 
+
+      $stmt = $con->prepare("SELECT user_key FROM users WHERE user_key = ?");
+      $stmt->execute(array($user_key));
+      $count = $stmt->rowCount();
+      if ($count > 0) {
+        $check_key = 1;
+      } else {
+
+        // add user to data base
+
+        $stmt = $con->prepare('INSERT INTO users (name, email, pass, phone, user_key) 
+                              VALUES (:name, :email, :pass, :phone, :key)');
+        $stmt->execute(array(
+          'name' => $name,
+          'email' => $email,
+          'pass' => $pass,
+          'phone' => $phone,
+          'key'   => $user_key
+        ));
+
+        $check_key = 0;
+        setcookie("user", $user_key, time() + 3600 * 24 * 90, "/");
+        header("location: profile.php");
+        exit();
+      }
+    }
+  }
+}
+
 
 // logout
 
@@ -96,7 +147,7 @@ if (isset($_GET['logout'])) {
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.php">Home</a></li>
+          <li><a class="nav-link scrollto " href="index.php">Home</a></li>
           <li><a class="nav-link scrollto" href="index.php#about">About</a></li>
           <li><a class="nav-link scrollto" href="index.php#services">Services</a></li>
           <li><a class="nav-link scrollto" href="index.php#portfolio">projects</a></li>
@@ -148,7 +199,7 @@ if (isset($_GET['logout'])) {
 
                 <div class="success-msg">
                   <p>Great! You are one of our members now</p>
-                  <a href="profile.php" class="profile">Your Profile</a>
+                  <a class="profile" href="profile.php">Your Profile</a>
                 </div>
               </div>
 
@@ -183,17 +234,17 @@ if (isset($_GET['logout'])) {
 
                 <!-- Signup Form -->
                 <div class="signup form-peice switched">
-                  <form class="signup-form" action="profile.php" method="get">
+                  <form class="signup-form" action="login.php" method="POST">
 
                     <div class="form-group">
                       <label for="name">Full Name</label>
-                      <input type="text" name="username" id="name" class="name">
+                      <input type="text" name="name" id="name" class="name">
                       <span class="error"></span>
                     </div>
 
                     <div class="form-group">
                       <label for="email">Email Adderss</label>
-                      <input type="email" name="emailAdress" id="email" class="email">
+                      <input type="email" name="email" id="email" class="email">
                       <span class="error"></span>
                     </div>
 
@@ -205,7 +256,7 @@ if (isset($_GET['logout'])) {
 
                     <div class="form-group">
                       <label for="password">Password</label>
-                      <input type="password" name="password" id="password" class="pass">
+                      <input type="password" name="pass" id="password" class="pass">
                       <span class="error"></span>
                     </div>
 
@@ -216,7 +267,7 @@ if (isset($_GET['logout'])) {
                     </div>
 
                     <div class="CTAA">
-                      <input type="submit" value="Signup Now" id="submit">
+                      <input type="submit" value="Signup Now" id="submit" name="signup">
                       <br>
                       <br>
                       <a href="#" class="switch">I have an account</a>
