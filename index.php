@@ -300,6 +300,57 @@ if (isset($_COOKIE['user'])) {
       </div>
     </section><!-- End Why Us Section -->
 
+        <!-- ======= client Section ======= -->
+        <section class="clients">
+          <div class="container">
+            <div class="section-title">
+              <h2>clients</h2>
+              <p>Check our clients </p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-6 col-md-3 ">
+                    <div class="client-img">
+                        <img src="assets/img/logo.png" style="width: 100px;height:90px" alt="" srcset="">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 ">
+                  <div class="client-img">
+                      <img src="assets/img/logo.png" style="width: 100px;height:90px" alt="" srcset="">
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3 ">
+                  <div class="client-img">
+                      <img src="assets/img/logo.png" style="width: 100px;height:90px" alt="" srcset="">
+                  </div>
+                </div>
+
+              <div class="col-6 col-md-3 ">
+                <div class="client-img">
+                    <img src="assets/img/logo.png" style="width: 100px;height:90px" alt="" srcset="">
+                </div>
+              </div>
+
+              <div class="col-6 col-md-3 ">
+                <div class="client-img">
+                    <img src="assets/img/logo.png" style="width: 100px;height:90px" alt="" srcset="">
+                </div>
+              </div>
+
+              <div class="col-6 col-md-3 ">
+                <div class="client-img">
+                  <img src="assets/img/awaits.png" style="width: 100px;height:90px" alt="" srcset="">
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+
+        </section>
+        <!-- End Services Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
