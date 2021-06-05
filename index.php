@@ -169,7 +169,7 @@ if (isset($_COOKIE['user'])) {
             <ul>
               <li><i class="fas fa-check-double"></i> High quality</li>
               <li><i class="fas fa-check-double"></i> Competitive prices</li>
-              <li><i class="fas fa-check-double"></i> Be on time</li>
+              <li><i class="fas fa-check-double"></i> Professional team</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
@@ -352,8 +352,6 @@ if (isset($_COOKIE['user'])) {
     </section>
     <!-- End Services Section -->
 
-
-
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container" data-aos="fade-up">
@@ -406,9 +404,9 @@ if (isset($_COOKIE['user'])) {
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
-              <div class="icon"><i class="fab fa-opencart"></i></div>
-              <h4><a> OpenCart Stores </a></h4>
-              <p>Over the past decade, our customers succeeded by leveraging Intellectsoft’s process of building, motivating.</p>
+              <div class="icon"><i class="fas fa-tasks"></i></div>
+              <h4><a>  ERP software </a></h4>
+              <p>A success company starts with a god software to manage their business , mange your business (ORM , Accounting , HR)</p>
             </div>
           </div>
 
@@ -751,12 +749,9 @@ if (isset($_COOKIE['user'])) {
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-
 
 
 
