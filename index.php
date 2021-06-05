@@ -352,38 +352,6 @@ if (isset($_COOKIE['user'])) {
     </section>
     <!-- End Services Section -->
 
-
-                <!-- ======= client Section ======= -->
-                <section class="clients">
-                  <div class="container">
-                    <div class="section-title">
-                      <h2>clients</h2>
-                      <p>Check our clients </p>
-                    </div>
-        
-                    <div class="text-center">
-                        <!-- Swiper -->
-                        <div class="swiper-container mySwiper">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="assets/img/logo.png" class="swiper-img" alt="" ></div>
-                            <div class="swiper-slide"><img src="assets/img/logo.png" class="swiper-img" alt="" ></div>
-                            <div class="swiper-slide"><img src="assets/img/logo.png" class="swiper-img" alt="" ></div>
-                            <div class="swiper-slide"><img src="assets/img/logo.png" class="swiper-img" alt="" ></div>
-                            <div class="swiper-slide"><img src="assets/img/logo.png" class="swiper-img" alt="" ></div>
-                            <div class="swiper-slide"><img src="assets/img/awaits.png" class="swiper-img" alt="" ></div>
-                            
-                          </div>
-                          <div class="swiper-pagination"></div>
-                      </div>
-
-                      <!-- Swiper JS -->
-                    </div>
-                  </div>
-                  
-        
-                </section>
-                <!-- End Services Section -->
-
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container" data-aos="fade-up">
@@ -781,32 +749,9 @@ if (isset($_COOKIE['user'])) {
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-    if (screen.width <= 800) {
-      var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 2,
-          spaceBetween: 30,
-          pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          },
-      });
-      }else{
-          var swiper = new Swiper(".mySwiper", {
-              slidesPerView: 5,
-              spaceBetween: 30,
-              pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-              },
-          });
-      }
-  </script>
 
 
 
