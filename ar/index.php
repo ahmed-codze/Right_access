@@ -48,9 +48,20 @@ if (isset($_COOKIE['user'])) {
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
+  <style>
+  .about .content ul li {
+    padding-left : 0px ;
+    padding-right : 28px ;
+  }
+  .about .content ul i{
+    right :0;
+  }
+
+  </style>
+
 </head>
 
-<body dir="rtl">
+<body >
   <script async="async" src="https://static.mobilemonkey.com/js/business_7284f9b8-1edf-429a-82da-485195b500e9-87930694.js"></script>
   <script>
     window.mmDataLayer = window.mmDataLayer || [];
@@ -60,7 +71,7 @@ if (isset($_COOKIE['user'])) {
     }
   </script>
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top" dir="rtl">
     <div class="container d-flex align-items-center justify-content-between">
 
       <!-- <h1 class="logo"><a href="index.php">Right Access</a></h1> -->
@@ -72,7 +83,7 @@ if (isset($_COOKIE['user'])) {
           <li><a class="nav-link scrollto active" href="#hero">الرئيسيه</a></li>
           <li><a class="nav-link scrollto" href="#about">عنا</a></li>
           <li><a class="nav-link scrollto" href="#services">خدماتنا</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">مشاريعنا</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">معرض اعمالنا</a></li>
           <li><a class="nav-link scrollto " href="#technologies">التقنيات</a></li>
           <li><a class="nav-link scrollto" href="#contact">تواصل معنا</a></li>
           <?php
@@ -101,39 +112,39 @@ if (isset($_COOKIE['user'])) {
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
+  <section id="hero" >
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
-      <div class="carousel-inner" role="listbox">
+      <div class="carousel-inner" role="listbox" >
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(../assets/img/slide/right_access-1.jpg)">
+        <div class="carousel-item active" style="background-image: url(../assets/img/slide/right_access-1.jpg)"  dir="rtl">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Right Access</span></h2>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+              <h2 class="animate__animated animate__fadeInDown"> مرحبا بك في <span> رايت اكسس</span></h2>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">اقرأ المزيد</a>
             </div>
           </div>
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(../assets/img/slide/right_access-2.jpg)">
+        <div class="carousel-item" style="background-image: url(../assets/img/slide/right_access-2.jpg)"  dir="rtl">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">POWERFUL DIGITAL SOLUTIONS</h2>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+              <h2 class="animate__animated animate__fadeInDown">حلول رقمية قوية </h2>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">اقرأ المزيد</a>
             </div>
           </div>
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(../assets/img/slide/right_access-3.jpg)">
+        <div class="carousel-item" style="background-image: url(../assets/img/slide/right_access-3.jpg)"  dir="rtl">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Your Partner for Software Innovation</h2>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+              <h2 class="animate__animated animate__fadeInDown">شريكك في ابتكار البرمجيات </h2>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">اقرأ المزيد</a>
             </div>
           </div>
         </div>
@@ -151,35 +162,35 @@ if (isset($_COOKIE['user'])) {
     </div>
   </section><!-- End Hero -->
 
-  <main id="main">
+  <main id="main" dir="rtl">
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>About</h2>
-          <p>About Us</p>
+          <h2>عنا</h2>
+          <p>عن رايت اكسس</p>
         </div>
 
         <div class="row content">
           <div class="col-lg-6">
             <p style="font-size: 20px;">
-              Your Partner for Software Innovation
+              شريكك في ابتكار البرمجيات 
             </p>
             <ul>
-              <li><i class="fas fa-check-double"></i> High quality</li>
-              <li><i class="fas fa-check-double"></i> Competitive prices</li>
-              <li><i class="fas fa-check-double"></i> Professional team</li>
+              <li><i class="fas fa-check-double" style="float:right"></i>  جوده عاليه</li>
+              <li><i class="fas fa-check-double" style="float:right"></i>  اسعار تنافسيه</li>
+              <li><i class="fas fa-check-double" style="float:right"></i>  فريق محترف</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Right Access is the partner of choice for many of the world’s leading enterprises,
-              SMEs and technology challengers. We help businesses elevate their value through
-              custom software development, product design, QA and consultancy services.
+               رايت اكسس هي الشريك المفضل للعديد من الشركات الرائدة في العالم ،
+               الشركات الصغيرة والمتوسطة  في مجال التكنولوجيا. نحن نساعد الشركات على رفع قيمتها من خلال
+               تطوير البرمجيات المخصصة وتصميم المنتجات وضمان الجودة والخدمات الاستشارية. 
             </p>
-            <a href="#why-us" class="btn-learn-more">Learn More</a>
+            <a href="#why-us" class="btn-learn-more"> اعرف المزيد</a>
           </div>
         </div>
 
@@ -196,8 +207,8 @@ if (isset($_COOKIE['user'])) {
             <div class="count-box">
               <i class="bi bi-emoji-smile"></i>
               <span data-purecounter-start="0" data-purecounter-end="330" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong></p>
-              <a href="#why-us">Find out more &raquo;</a>
+              <p><strong> عملاء سعداء</strong></p>
+              <a href="#why-us">اعرف المزيد&raquo;</a>
             </div>
           </div>
 
@@ -205,8 +216,8 @@ if (isset($_COOKIE['user'])) {
             <div class="count-box">
               <i class="bi bi-journal-richtext"></i>
               <span data-purecounter-start="0" data-purecounter-end="850" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Project Done</strong> </p>
-              <a href="#why-us">Find out more &raquo;</a>
+              <p><strong> مشاريع مكتمله</strong> </p>
+              <a href="#why-us">اعرف المزيد&raquo;</a>
             </div>
           </div>
 
@@ -214,8 +225,8 @@ if (isset($_COOKIE['user'])) {
             <div class="count-box">
               <i class="bi bi-headset"></i>
               <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Team Advisors</strong> </p>
-              <a href="#why-us">Find out more &raquo;</a>
+              <p><strong>مستشاري الفريق </strong> </p>
+              <a href="#why-us">اعرف المزيد&raquo;</a>
             </div>
           </div>
 
@@ -236,57 +247,58 @@ if (isset($_COOKIE['user'])) {
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
 
             <div class="content">
-              <h3>Improve and Innovate with the Tech Trends</h3>
+              <h3>تحسين وابتكار مع الاتجاهات التقنية </h3>
               <p>
-                We hire and build your own remote dedicated development teams tailored to your specific needs.
-                Get professional fulltime developers who work exclusively for you as a part of your company.
-                We handle all the practical aspects related to hiring and hosting your team at our premises,
-                thus saving you half a cost and a lot of efforts.
+                 نقوم بتوظيف وبناء فرق التطوير المخصصة عن بُعد الخاصة بك والمصممة وفقًا لاحتياجاتك الخاصة.
+                 احصل على مطورين محترفين بدوام كامل يعملون حصريًا من أجلك كجزء من شركتك.
+                 نتعامل مع جميع الجوانب العملية المتعلقة بالتوظيف واستضافة فريقك في مقرنا ،
+                 مما يوفر عليك نصف التكلفة والكثير من الجهد.
               </p>
             </div>
 
             <div class="accordion-list">
               <ul>
                 <li>
-                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Our Mission <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> مهمتنا  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                     <p>
-                      Our mission is to promote business growth for our customers through creative
-                      design and development and deliver high quality solutions that define the market and
-                      create competitive value and reliable advantage for customers worldwide.
+                       مهمتنا هي تعزيز نمو الأعمال لعملائنا من خلال الإبداع
+                       تصميم وتطوير وتقديم حلول عالية الجودة تحدد السوق و
+                       خلق قيمة تنافسية وميزة موثوقة للعملاء في جميع أنحاء العالم. 
                     </p>
                   </div>
                 </li>
 
                 <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Our Vision <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> رؤيتنا  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p>
-                      It is one of the leading software companies that helps other organizations become digital organizations.
-                      It sets you apart from competitors in the market and provides better engagement with customers, partners and employees. </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Our Philosophy <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      People do judge a book by its cover. We may have the best product,
-                      the highest quality, the most useful software, etc, if we present them in a slipshod manner,
-                      they will be perceived as slipshod. If we present them in a creative, professional manner,
-                      we will impute the desired qualities.
+                      إنها واحدة من شركات البرمجيات الرائدة التي تساعد المؤسسات الأخرى على أن تصبح مؤسسات رقمية.
+                       يميزك عن المنافسين في السوق ويوفر مشاركة أفضل مع العملاء والشركاء والموظفين. 
                     </p>
                   </div>
                 </li>
 
                 <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>03</span> Our Strategy <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>  فلسفتنا <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      يحكم الناس على الكتاب من غلافه. قد يكون لدينا أفضل منتج ،
+                       أعلى جودة ، وأكثر البرامج فائدة ، وما إلى ذلك ، إذا قدمناها بطريقة متقطعة ،
+                       سوف يُنظر إليهم على أنهم مبتذلون. إذا قدمناها بطريقة إبداعية ومهنية ،
+                       سوف ننسب الصفات المطلوبة. 
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>03</span>  خطتنا <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
                     <p>
-                      Over the past years, we have studied companies that have achieved breakthroughs in
-                      achievement and hundreds of customers through research and studies and have adopted
-                      all associated tools to help us better reach that strategy for our customers and guide and
-                      monitor the implementation of that strategy with our employees.
+                     على مدار السنوات الماضية ، قمنا بدراسة الشركات التي حققت اختراقات في
+                       إنجاز ومئات من العملاء من خلال البحوث والدراسات واعتمدوها
+                       جميع الأدوات المرتبطة لمساعدتنا في الوصول إلى هذه الإستراتيجية لعملائنا بشكل أفضل وتوجيه و
+                       مراقبة تنفيذ تلك الإستراتيجية مع موظفينا.
                     </p>
                   </div>
                 </li>
@@ -305,8 +317,8 @@ if (isset($_COOKIE['user'])) {
     <section class="clients">
       <div class="container">
         <div class="section-title">
-          <h2>clients</h2>
-          <p>Check our clients </p>
+          <h2>عملاؤنا</h2>
+          <p>  نبذه من عملاؤنا </p>
         </div>
 
         <div class="row text-center">
@@ -358,56 +370,56 @@ if (isset($_COOKIE['user'])) {
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</h2>
-          <p>Check our Services</p>
+          <h2>خدماتنا</h2>
+          <p> نبذه من خدماتنا</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-laptop"></i></div>
-              <h4><a>Web Development</a></h4>
-              <p>We carry more than just good coding skills. Our experience makes us stand out from other web development.</p>
+              <h4><a> تطوير المواقع الالكترونيه</a></h4>
+              <p>نحن نحمل أكثر من مجرد مهارات برمجه جيدة. تجربتنا تجعلنا نتميز عن غيرها من مطوري الويب. </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-mobile"></i></div>
-              <h4><a>Mobile Development</a></h4>
-              <p>Create complex enterprise software, ensure reliable software integration, modernise your legacy system.</p>
+              <h4><a> تكوير تطبيفات الويب</a></h4>
+              <p>قم بإنشاء تطبيفات مؤسسة معقدة ، ضمان تكامل موثوق للبرامج ، تحديث نظامك القديم. </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="fa fa-palette"></i></div>
-              <h4><a> UI/UX Design </a></h4>
-              <p>Build the product you need on time with an experienced team that uses a clear and effective design.</p>
+              <h4><a>  تصاميم UI/UX </a></h4>
+              <p>قم ببناء المنتج الذي تحتاجه في الوقت المحدد مع فريق متمرس يستخدم تصميمًا واضحًا وفعالًا.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
-              <h4><a>QA & Testing</a></h4>
-              <p>Turn to our experts to perform comprehensive, Right Access-stage testing and auditing of your software.</p>
+              <h4><a> ضمان الجوده  </a></h4>
+              <p>استعن بخبرائنا لإجراء اختبار شامل ومراحل الوصول الصحيح ومراجعة برامجك.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-shopping-cart"></i></div>
-              <h4><a>ecommerce website </a></h4>
-              <p>Trust our top minds to eliminate workflow pain points, implement new tech, and consolidate app.</p>
+              <h4><a> مواقع التجارة الإلكترونية  </a></h4>
+              <p>ق بأفكارنا المتميزة للتخلص من نقاط ضعف سير العمل ، وتنفيذ تقنية جديدة ، ودمج التطبيق. </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-tasks"></i></div>
-              <h4><a>  ERP software </a></h4>
-              <p>A success company starts with a god software to manage their business , mange your business (ORM , Accounting , HR)</p>
+              <h4><a>   برامج اداره الشركات </a></h4>
+              <p>تبدأ اي شركة ناجحة ببرنامج جيد لإدارة أعمالهم   (نظام اداره عملاء ،نظام محاسبة ، نظام اداره موارد بشرية)</p>
             </div>
           </div>
 
@@ -428,16 +440,16 @@ if (isset($_COOKIE['user'])) {
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Check our Portfolio</p>
+          <h2>معرض اعمالنا</h2>
+          <p> نبذه من مشاريعنا </p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-Apps">Apps</li>
-              <li data-filter=".filter-Websites">Websites</li>
+              <li data-filter="*" class="filter-active">الكل</li>
+              <li data-filter=".filter-Apps">تطبيقات</li>
+              <li data-filter=".filter-Websites">مواقع</li>
             </ul>
           </div>
         </div>
@@ -483,9 +495,9 @@ if (isset($_COOKIE['user'])) {
       <div class="container" data-aos="zoom-in">
 
         <div class="text-center">
-          <h3>// ! We are here to answer your questions </h3>
-          <p> Need a Consultation </p>
-          <a class="cta-btn" href="#contact">Contact Us</a>
+          <h3>// ! نحن هنا للاجابه عن اسألتك  </h3>
+          <p> تبحث عن استشاره ؟ </p>
+          <a class="cta-btn" href="#contact"> تواصل معنا</a>
         </div>
 
       </div>
@@ -499,8 +511,8 @@ if (isset($_COOKIE['user'])) {
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2> use efficient Tech </h2>
-          <p>Technologies we use</p>
+          <h2>  تقنيات حديثه و متطوره </h2>
+          <p> التقنيات التي نستخدمها</p>
         </div>
 
 
@@ -607,8 +619,8 @@ if (isset($_COOKIE['user'])) {
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
+          <h2>تواصل</h2>
+          <p> تواصل معنا</p>
         </div>
 
         <div class="row">
@@ -619,22 +631,23 @@ if (isset($_COOKIE['user'])) {
               <div class="col-md-12">
                 <div class="info-box">
                   <i class="fas fa-map-marker-alt"></i>
-                  <h3>Our Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <h3> عنواننا </h3>
+                  <p>المملكة العربية السعودية - الرياض
+                      - طريق الملك فهد - برج حمد </p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="fas fa-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>info@example.com<br></p>
+                  <h3> بريدنا الاكتروني</h3>
+                  <p>info@rightaccess.co<br></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="fas fa-phone-alt"></i>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55<br></p>
+                  <h3> اتصل بنا</h3>
+                  <p>966550978623+<br></p>
                 </div>
               </div>
             </div>
@@ -645,24 +658,24 @@ if (isset($_COOKIE['user'])) {
             <form action="" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" value="<?php echo $name; ?>" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="name" value="<?php echo $name; ?>" placeholder=" اسمك" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" value="<?php echo $email; ?>" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" id="email" value="<?php echo $email; ?>" placeholder=" بريدك الاكتروني" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="عنوان" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="رسالتك" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
+                <div class="loading">تحميل</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit"> ارسال</button></div>
             </form>
           </div>
 
@@ -674,7 +687,7 @@ if (isset($_COOKIE['user'])) {
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer" dir="rtl">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -682,11 +695,11 @@ if (isset($_COOKIE['user'])) {
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <p>
-                Saudi Arabia - Riyadh -
-                <br>
-                King Fahd Road - Hamad Tower<br><br>
-                <strong>Phone : </strong> +966559275722 <br>
-                <strong>Email : </strong> info@rightaccess.co<br>
+              المملكة العربية السعودية - الرياض
+              <br>
+                      - طريق الملك فهد - برج حمد<br><br>
+                <strong>هاتف : </strong> 966559275722+ <br>
+                <strong>ايميل : </strong> info@rightaccess.co<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
@@ -700,28 +713,28 @@ if (isset($_COOKIE['user'])) {
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">الرئيسيه</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about"> عنا</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">خدماتنا</a></li>
             </ul>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Mobile Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> UI/UX Design </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">QA & Testing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> ecommerce website </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> OpenCart Stores </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير مواقع</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير تطبيفات</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> تصاميم UI/UX  </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">ضمان الجوده</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">  مواقع تجاره الكترونيه </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">  براجم اداره الشركات </a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join our mail list</h4>
+            <h4>   انضم لقايمتنا البريديه</h4>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="انضم">
             </form>
 
           </div>
@@ -732,7 +745,7 @@ if (isset($_COOKIE['user'])) {
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Right Access</span></strong>. All Rights Reserved
+        &copy; حقوق ملكيه <strong><span>Right Access</span></strong> .كل الحقوق محفوظه
       </div>
       <div class="credits">
       </div>

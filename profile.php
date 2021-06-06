@@ -114,6 +114,7 @@ if ($count > 0) {
           }
 
           ?>
+          <li><a class="nav-link scrollto" href="ar/index.php">العربيه  </a></li>
           <li><a class="getstarted scrollto" href="login.php">Get Started</a></li>
         </ul>
         <i class="fas fa-bars mobile-nav-toggle"></i>
@@ -325,12 +326,12 @@ if ($count > 0) {
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Mobile Development</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> UI/UX Design </a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">QA & Testing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> ecommerce website </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> OpenCart Stores </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">   ERP software </a></li>
             </ul>
           </div>
 

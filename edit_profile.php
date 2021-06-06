@@ -164,6 +164,7 @@ if (isset($_POST['update'])) {
                     }
 
                     ?>
+                    <li><a class="nav-link scrollto" href="ar/index.php">العربيه  </a></li>
                     <li><a class="getstarted scrollto" href="login.php">Get Started</a></li>
                 </ul>
                 <i class="fas fa-bars mobile-nav-toggle"></i>
@@ -260,7 +261,7 @@ if (isset($_POST['update'])) {
                             <li><i class="bx bx-chevron-right"></i> <a href="#"> UI/UX Design </a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#">QA & Testing</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#"> ecommerce website </a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#"> OpenCart Stores </a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">   ERP software </a></li>
                         </ul>
                     </div>
 
