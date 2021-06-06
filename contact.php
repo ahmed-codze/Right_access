@@ -201,21 +201,21 @@ if (isset($_COOKIE['user'])) {
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php#about">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php#services">Services</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-2 col-md-6 footer-links">
                         <h4>Our Services</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Mobile Development</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#"> UI/UX Design </a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">QA & Testing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#"> ecommerce website </a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">   ERP software </a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php#services">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php#services">Mobile Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php#services"> UI/UX Design </a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php#services">QA & Testing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php#services"> ecommerce website </a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="index.php#services">   ERP software </a></li>
                         </ul>
                     </div>
 

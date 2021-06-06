@@ -212,21 +212,21 @@ if (isset($_COOKIE['user'])) {
           <div class="col-lg-2 col-md-6 footer-links">
             <h4> روابط سريعه</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">الرئيسيه</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about"> عنا</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">خدماتنا</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php">الرئيسيه</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php#about"> عنا</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php#services">خدماتنا</a></li>
             </ul>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>خدماتنا </h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير مواقع</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير تطبيفات</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> تصاميم UI/UX </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">فحص و اختبار البرمجيات </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> مواقع تجاره الكترونيه </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> براجم اداره الشركات </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php#services"> تطوير مواقع</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php#services"> تطوير تطبيفات</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php#services"> تصاميم UI/UX </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php#services">فحص و اختبار البرمجيات </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php#services"> مواقع تجاره الكترونيه </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php#services"> براجم اداره الشركات </a></li>
             </ul>
           </div>
 
