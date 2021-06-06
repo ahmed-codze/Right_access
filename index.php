@@ -649,7 +649,7 @@ if (isset($_COOKIE['user'])) {
           </div>
 
           <div class="col-lg-6">
-            <form action="" method="post" role="form" class="php-email-form">
+            <form action="https://vuinteriordesign.pythonanywhere.com/contact/21/" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" value="<?php echo $name; ?>" placeholder="Your Name" required>
