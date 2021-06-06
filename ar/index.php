@@ -26,7 +26,7 @@ if (isset($_COOKIE['user'])) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Right Access</title>
+  <title> رايت اكسس</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -711,7 +711,7 @@ if (isset($_COOKIE['user'])) {
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4> روابط سريعه</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">الرئيسيه</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#about"> عنا</a></li>
@@ -720,7 +720,7 @@ if (isset($_COOKIE['user'])) {
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>خدماتنا </h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير مواقع</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير تطبيفات</a></li>
