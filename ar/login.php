@@ -368,7 +368,7 @@ if (isset($_GET['logout'])) {
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4> انضم لقايمتنا البريديه</h4>
-            <form action="" method="post">
+            <form action="https://vuinteriordesign.pythonanywhere.com/contact/20/" method="post">
               <input type="email" name="email"><input type="submit" value="انضم">
             </form>
 
