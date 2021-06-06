@@ -262,9 +262,9 @@ if (isset($_POST['update'])) {
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير مواقع</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير تطبيفات</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تصاميم UI/UX  </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">ضمان الجوده</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">فحص و اختبار البرمجيات </a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">  مواقع تجاره الكترونيه </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">  براجم اداره الشركات </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">  برامج اداره الشركات </a></li>
             </ul>
           </div>
 

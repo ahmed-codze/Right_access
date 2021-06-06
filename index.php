@@ -47,6 +47,11 @@ if (isset($_COOKIE['user'])) {
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .portfolio .portfolio-item .portfolio-info .details-link {
+      right: 10px;
+    }
+  </style>
 
 </head>
 

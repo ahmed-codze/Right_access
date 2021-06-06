@@ -1225,7 +1225,7 @@ section {
 .portfolio .portfolio-item .portfolio-info .preview-link,
 .portfolio .portfolio-item .portfolio-info .details-link {
   position: absolute;
-  right: 40px;
+  /* right: 40px; */
   font-size: 24px;
   top: calc(50% - 18px);
   color: #123a6d;
@@ -1236,9 +1236,7 @@ section {
   color: #4154f1;
 }
 
-.portfolio .portfolio-item .portfolio-info .details-link {
-  right: 10px;
-}
+
 
 .portfolio .portfolio-item .portfolio-links {
   opacity: 0;

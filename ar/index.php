@@ -57,6 +57,10 @@ if (isset($_COOKIE['user'])) {
     right :0;
   }
 
+  .portfolio .portfolio-item .portfolio-info .details-link {
+    left: 10px;
+  }
+
   </style>
 
 </head>
@@ -133,7 +137,7 @@ if (isset($_COOKIE['user'])) {
         <div class="carousel-item" style="background-image: url(../assets/img/slide/right_access-2.jpg)"  dir="rtl">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">حلول رقمية قوية </h2>
+              <h2 class="animate__animated animate__fadeInDown">حلول برمجية و تقنية </h2>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">اقرأ المزيد</a>
             </div>
           </div>
@@ -185,10 +189,8 @@ if (isset($_COOKIE['user'])) {
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-               رايت اكسس هي الشريك المفضل للعديد من الشركات الرائدة في العالم ،
-               الشركات الصغيرة والمتوسطة  في مجال التكنولوجيا. نحن نساعد الشركات على رفع قيمتها من خلال
-               تطوير البرمجيات المخصصة وتصميم المنتجات وضمان الجودة والخدمات الاستشارية. 
+            <p> رايت اكسس
+            هو الشريك المفضل للعديد من الشركات الرائدة في العالم والشركات الصغيرة والمتوسطة ومنافسي التكنولوجيا. نحن نساعد الشركات على رفع قيمتها من خلال تطوير و تصميم المواقع  ، وتطبيقات الجوال بجميع انواعها  ، وأختبار البرمجيات  ،  و ايضا تصميم الواجهات للمواقع و التطبيقات
             </p>
             <a href="#why-us" class="btn-learn-more"> اعرف المزيد</a>
           </div>
@@ -247,12 +249,9 @@ if (isset($_COOKIE['user'])) {
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
 
             <div class="content">
-              <h3>تحسين وابتكار مع الاتجاهات التقنية </h3>
+              <h3>تطويرات وابتكارات مع خبراء التكنولوجيا</h3>
               <p>
-                 نقوم بتوظيف وبناء فرق التطوير المخصصة عن بُعد الخاصة بك والمصممة وفقًا لاحتياجاتك الخاصة.
-                 احصل على مطورين محترفين بدوام كامل يعملون حصريًا من أجلك كجزء من شركتك.
-                 نتعامل مع جميع الجوانب العملية المتعلقة بالتوظيف واستضافة فريقك في مقرنا ،
-                 مما يوفر عليك نصف التكلفة والكثير من الجهد.
+                 نقوم بتوظيف وبناء فرق التطوير المخصصة عن بُعد الخاصة بنا والمصممة وفقًا لاحتياجاتك الخاصة.
               </p>
             </div>
 
@@ -262,9 +261,11 @@ if (isset($_COOKIE['user'])) {
                   <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> مهمتنا  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                     <p>
-                       مهمتنا هي تعزيز نمو الأعمال لعملائنا من خلال الإبداع
-                       تصميم وتطوير وتقديم حلول عالية الجودة تحدد السوق و
-                       خلق قيمة تنافسية وميزة موثوقة للعملاء في جميع أنحاء العالم. 
+                    نقوم بتطوير و بناء المواقع
+                    و التطبيقات و المشاريع  المخصصة الخاصة بك والمصممة وفقًا لاحتياجاتك الخاصة. احصل على
+                    مطورين محترفين  يعملون حصريًا من أجلك كجزء من شركتك. نتعامل مع جميع الجوانب العملية 
+                    المتعلقة بالبرمجة و التصميم ، مما يوفر لك نصف التكلفة والكثير من الجهد.
+
                     </p>
                   </div>
                 </li>
@@ -272,9 +273,10 @@ if (isset($_COOKIE['user'])) {
                 <li>
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> رؤيتنا  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      إنها واحدة من شركات البرمجيات الرائدة التي تساعد المؤسسات الأخرى على أن تصبح مؤسسات رقمية.
-                       يميزك عن المنافسين في السوق ويوفر مشاركة أفضل مع العملاء والشركاء والموظفين. 
+                    <p>              
+                          هي إحدى شركات البرمجيات البارزة التي تساعد المؤسسات
+                          الأخرى على التحول إلى مؤسسات رقمية. إنها تميزك عن المنافسين 
+                          في السوق وتوفر مشاركة أفضل مع العملاء والشركاء والموظفين.
                     </p>
                   </div>
                 </li>
@@ -283,10 +285,9 @@ if (isset($_COOKIE['user'])) {
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>  فلسفتنا <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                     <p>
-                      يحكم الناس على الكتاب من غلافه. قد يكون لدينا أفضل منتج ،
-                       أعلى جودة ، وأكثر البرامج فائدة ، وما إلى ذلك ، إذا قدمناها بطريقة متقطعة ،
-                       سوف يُنظر إليهم على أنهم مبتذلون. إذا قدمناها بطريقة إبداعية ومهنية ،
-                       سوف ننسب الصفات المطلوبة. 
+                    يحكم الناس على الكتاب من غلافه. قد يكون لدينا أفضل منتج ، وأعلى جودة ، وأكثر البرامج فائدة ، 
+                    وما إلى ذلك ، إذا قدمناها بطريقة متقطعة ، فسيتم اعتبارها على أنها متقطعة. 
+                    إذا قدمناها بطريقة إبداعية ومهنية ، سوف نحصل على النتائج المطلوبة.
                     </p>
                   </div>
                 </li>
@@ -294,11 +295,12 @@ if (isset($_COOKIE['user'])) {
                 <li>
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>03</span>  خطتنا <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                     على مدار السنوات الماضية ، قمنا بدراسة الشركات التي حققت اختراقات في
-                       إنجاز ومئات من العملاء من خلال البحوث والدراسات واعتمدوها
-                       جميع الأدوات المرتبطة لمساعدتنا في الوصول إلى هذه الإستراتيجية لعملائنا بشكل أفضل وتوجيه و
-                       مراقبة تنفيذ تلك الإستراتيجية مع موظفينا.
+                    <p>   
+                        على مدار الأعوام الماضية ، درسنا الشركات التي حققت طفرات  في الإنجاز والمئات من 
+                        العملاء من خلال الأبحاث و الدراسات و قد قمنا بتبني جميع الأدوات المرتبطة
+                        بها لمساعدتنا على الوصول لتلك الإستراتيجية بشكل أفضل لعملائنا
+                        وتوجيه  ومراقبة تنفيذ تلك الإستراتيجية مع موظفينا
+
                     </p>
                   </div>
                 </li>
@@ -379,15 +381,15 @@ if (isset($_COOKIE['user'])) {
             <div class="icon-box">
               <div class="icon"><i class="fas fa-laptop"></i></div>
               <h4><a> تطوير المواقع الالكترونيه</a></h4>
-              <p>نحن نحمل أكثر من مجرد مهارات برمجه جيدة. تجربتنا تجعلنا نتميز عن غيرها من مطوري الويب. </p>
+              <p>عندك شركة او مؤسسة و حابب يكون عندك واجهة اعلانية من خلال موقع إلكتروني مميز يساعك في عرض خدماتك بطريقة إحترافية و أسعار منافسة و وقت قياسي Right access عندها الحل . </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-mobile"></i></div>
-              <h4><a> تكوير تطبيفات الويب</a></h4>
-              <p>قم بإنشاء تطبيفات مؤسسة معقدة ، ضمان تكامل موثوق للبرامج ، تحديث نظامك القديم. </p>
+              <h4><a> تطوير تطبيقات الجوال   </a></h4>
+              <p>قم بإنشاء تطبيقك الخاص او تحديث تطبيقك الحالي عن طريق فريقنا الخبير المختص, بحيث يكون تطبيق يسوق نفسه بنفسه من خلال السلاسة و الإحترافية في التصميم مع المحافظة على الجودة العالية. </p>
             </div>
           </div>
 
@@ -395,15 +397,15 @@ if (isset($_COOKIE['user'])) {
             <div class="icon-box">
               <div class="icon"><i class="fa fa-palette"></i></div>
               <h4><a>  تصاميم UI/UX </a></h4>
-              <p>قم ببناء المنتج الذي تحتاجه في الوقت المحدد مع فريق متمرس يستخدم تصميمًا واضحًا وفعالًا.</p>
+              <p>قم ببناء التصميم الذي تحتاجه في الوقت المحدد مع فريق متمرس يستخدم منهجا واضحًا وفعالًا, من خلال التواصل الدائم مع العميل للوصول الى النتيجة المرادة إضافة الى تناسب التصميم مع جميع الأجهزة .</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
-              <h4><a> ضمان الجوده  </a></h4>
-              <p>استعن بخبرائنا لإجراء اختبار شامل ومراحل الوصول الصحيح ومراجعة برامجك.</p>
+              <h4><a> فحص و اختبار البرمجيات   </a></h4>
+              <p>استعن بخبرائنا لإجراء اختبار وتدقيق شامل ومتعدد المراحل لتطبيقك او موقعك بأعلى كفائة مهنية مع تقارير كاملة للاخطاء و المشاكل الموجودة .</p>
             </div>
           </div>
 
@@ -411,7 +413,7 @@ if (isset($_COOKIE['user'])) {
             <div class="icon-box">
               <div class="icon"><i class="fas fa-shopping-cart"></i></div>
               <h4><a> مواقع التجارة الإلكترونية  </a></h4>
-              <p>ق بأفكارنا المتميزة للتخلص من نقاط ضعف سير العمل ، وتنفيذ تقنية جديدة ، ودمج التطبيق. </p>
+              <p>ثق بأفكارنا المتميزة للتخلص من نقاط خطط العمل القديمة ، و العمل بأساليب حديثة ، ودمج عصارة تجاربنا في مشروعك. للتسويق لمنتجاتك ب الطريقة الصحيحة</p>
             </div>
           </div>
 
@@ -725,7 +727,7 @@ if (isset($_COOKIE['user'])) {
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير مواقع</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير تطبيفات</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تصاميم UI/UX  </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">ضمان الجوده</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">فحص و اختبار البرمجيات </a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">  مواقع تجاره الكترونيه </a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">  براجم اداره الشركات </a></li>
             </ul>
