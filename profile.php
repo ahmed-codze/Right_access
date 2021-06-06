@@ -326,7 +326,7 @@ if ($count > 0) {
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Mobile Development</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> UI/UX Design </a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">QA & Testing</a></li>
