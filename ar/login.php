@@ -110,8 +110,11 @@ if (isset($_GET['logout'])) {
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>login - Right Access</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Right access هو الشريك المفضل للعديد 
+  من الشركات الرائدة في العالم والشركات الصغيرة والمتوسطة
+   ومنافسي التكنولوجيا. نحن نساعد الشركات على
+    رفع قيمتها من خلال تطوير و تصميم المواقع  ، وتطبيقات الجوال بجميع انواعها  
+   ، وأختبار البرمجيات  ،  و ايضا تصميم الواجهات للمواقع و التطبيقات ." name="description">  <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="../assets/img/logo.jpg" rel="icon">

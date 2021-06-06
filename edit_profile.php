@@ -102,7 +102,9 @@ if (isset($_POST['update'])) {
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>Right Access</title>
-    <meta content="" name="description">
+    <meta content="right access is the partner of choice for many of the world’s 
+    leading enterprises, SMEs and technology challengers. We help businesses elevate their value 
+    through custom software development, product design, QA and consultancy services." name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->

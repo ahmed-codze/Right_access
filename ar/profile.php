@@ -51,8 +51,11 @@ if ($count > 0) {
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Profile - Right Access</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Right access هو الشريك المفضل للعديد 
+  من الشركات الرائدة في العالم والشركات الصغيرة والمتوسطة
+   ومنافسي التكنولوجيا. نحن نساعد الشركات على
+    رفع قيمتها من خلال تطوير و تصميم المواقع  ، وتطبيقات الجوال بجميع انواعها  
+   ، وأختبار البرمجيات  ،  و ايضا تصميم الواجهات للمواقع و التطبيقات ." name="description">  <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="../assets/img/logo.jpg" rel="icon">
@@ -71,6 +74,17 @@ if ($count > 0) {
   <!--  Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
   <link href="../assets/css/profile.css" rel="stylesheet">
+  <style>
+    *,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Cairo', sans-serif;
+    }
+  </style>
 
 </head>
 
