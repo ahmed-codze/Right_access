@@ -8,31 +8,31 @@ if (isset($_GET['client'])) {
 
   $client = filter_var($_GET['client'], FILTER_SANITIZE_STRING);
 
-  $stmt = $con->prepare("SELECT en_client FROM portfolio WHERE en_client = ?");
+  $stmt = $con->prepare("SELECT client FROM portfolio WHERE client = ?");
   $stmt->execute(array($client));
   $count = $stmt->rowCount();
   if ($count > 0) {
 
     // get work information 
 
-    $stmt = $con->prepare("SELECT * FROM portfolio WHERE en_client = ?");
+    $stmt = $con->prepare("SELECT * FROM portfolio WHERE client = ?");
     $stmt->execute(array($client));
     $rows = $stmt->fetchAll();
 
     // the loop 
     foreach ($rows as $row) {
-      $catagory = $row['en_catagory'];
-      $description = $row['en_description'];
+      $catagory = $row['catagory'];
+      $description = $row['description'];
       $first_img = $row['first_img'];
       $sec_img = $row['sec_img'];
       $third_img = $row['third_img'];
       if ($row['en_catagory'] == 'Apps') {
         $link = '
-        <li><a href="' . $row['ios_link'] . '"><strong>IOS url</strong></a>&nbsp;&nbsp;&nbsp;<a href="' . $row['android_link'] . '"><strong>Android url</strong></a></li>
+        <li><a href="' . $row['ios_link'] . '"><strong>رابط Ios</strong></a>&nbsp;&nbsp;&nbsp;<a href="' . $row['android_link'] . '"><strong>رابط الاندرويد</strong></a></li>
         ';
       } else {
         $link = '
-        <li><strong>Project URL</strong>: <a href="' . $row['link'] . '">' . $row['link'] . '</a></li>
+        <li><strong>رابط الموقع</strong>: <a href="' . $row['link'] . '">' . $row['link'] . '</a></li>
 
         ';
       }
@@ -64,8 +64,8 @@ if (isset($_GET['client'])) {
   <link href="../assets/img/logo.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <!-- Vendor CSS Files -->
   <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
@@ -75,13 +75,29 @@ if (isset($_GET['client'])) {
   <link href="../assets/vendor/font awesome/all.min.css" rel="stylesheet" />
   <!--   Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
-
+  <style>
+    *,
+    .why-us .accordion-list a,
+    #hero .btn-get-started,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .counts .count-box a,
+    .section-title p,
+    .cta .cta-btn,
+    .about .content .btn-learn-more {
+      font-family: 'Cairo', sans-serif;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top" dir="rtl">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top" dir="rtl">
     <div class="container d-flex align-items-center justify-content-between">
 
       <!-- <h1 class="logo"><a href="index.php">Right Access</a></h1> -->
@@ -111,7 +127,7 @@ if (isset($_GET['client'])) {
           }
 
           ?>
-          <li><a class="nav-link scrollto" href="../index.php">English  </a></li>
+          <li><a class="nav-link scrollto" href="../index.php">English </a></li>
           <li><a class="getstarted scrollto" href="login.php">ابدأ رحلتك </a></li>
 
         </ul>
@@ -119,8 +135,9 @@ if (isset($_GET['client'])) {
       </nav><!-- .navbar -->
 
     </div>
-  </header><!-- End Header --><!-- End Header -->
-    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+  </div>
   </header><!-- End Header -->
 
   <main id="main" dir="rtl">
@@ -189,9 +206,9 @@ if (isset($_GET['client'])) {
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <p>
-              المملكة العربية السعودية - الرياض
-              <br>
-                      - طريق الملك فهد - برج حمد<br><br>
+                المملكة العربية السعودية - الرياض
+                <br>
+                - طريق الملك فهد - برج حمد<br><br>
                 <strong>هاتف : </strong> 966559275722+ <br>
                 <strong>ايميل : </strong> info@rightaccess.co<br>
               </p>
@@ -218,15 +235,15 @@ if (isset($_GET['client'])) {
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير مواقع</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير تطبيفات</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> تصاميم UI/UX  </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> تصاميم UI/UX </a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">فحص و اختبار البرمجيات </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">  مواقع تجاره الكترونيه </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">  برامج اداره الشركات </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> مواقع تجاره الكترونيه </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> برامج اداره الشركات </a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>   انضم لقايمتنا البريديه</h4>
+            <h4> انضم لقايمتنا البريديه</h4>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="انضم">
             </form>

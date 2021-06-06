@@ -35,8 +35,8 @@ if (isset($_COOKIE['user'])) {
   <link href="../assets/img/logo.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <!-- Vendor CSS Files -->
   <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
@@ -49,23 +49,47 @@ if (isset($_COOKIE['user'])) {
   <link href="../assets/css/style.css" rel="stylesheet">
 
   <style>
-  .about .content ul li {
-    padding-left : 0px ;
-    padding-right : 28px ;
-  }
-  .about .content ul i{
-    right :0;
-  }
+    *,
+    .why-us .accordion-list a,
+    #hero .btn-get-started,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .counts .count-box a,
+    .section-title p,
+    .cta .cta-btn,
+    .about .content .btn-learn-more {
+      font-family: 'Cairo', sans-serif;
+    }
 
-  .portfolio .portfolio-item .portfolio-info .details-link {
-    left: 10px;
-  }
+    .portfolio #portfolio-flters li {
+      font-size: 20px;
+    }
 
+    .about .content ul li {
+      padding-left: 0px;
+      padding-right: 28px;
+    }
+
+    .about .content ul i {
+      right: 0;
+    }
+
+    .portfolio .portfolio-item .portfolio-info .details-link {
+      left: 10px;
+    }
+
+    .navbar a {
+      font-size: unset;
+    }
   </style>
 
 </head>
 
-<body >
+<body>
   <script async="async" src="https://static.mobilemonkey.com/js/business_7284f9b8-1edf-429a-82da-485195b500e9-87930694.js"></script>
   <script>
     window.mmDataLayer = window.mmDataLayer || [];
@@ -89,7 +113,7 @@ if (isset($_COOKIE['user'])) {
           <li><a class="nav-link scrollto" href="#services">خدماتنا</a></li>
           <li><a class="nav-link scrollto" href="#portfolio">معرض اعمالنا</a></li>
           <li><a class="nav-link scrollto " href="#technologies">التقنيات</a></li>
-          <li><a class="nav-link scrollto" href="#contact">تواصل معنا</a></li>
+          <li><a class="nav-link scrollto" href="contact.php">تواصل معنا</a></li>
           <?php
 
           if (isset($_COOKIE['user'])) {
@@ -105,7 +129,7 @@ if (isset($_COOKIE['user'])) {
           }
 
           ?>
-          <li><a class="nav-link scrollto" href="../index.php">English  </a></li>
+          <li><a class="nav-link scrollto" href="../index.php">English </a></li>
           <li><a class="getstarted scrollto" href="login.php">ابدأ رحلتك </a></li>
 
         </ul>
@@ -116,15 +140,15 @@ if (isset($_COOKIE['user'])) {
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" >
+  <section id="hero">
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
-      <div class="carousel-inner" role="listbox" >
+      <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(../assets/img/slide/right_access-1.jpg)"  dir="rtl">
+        <div class="carousel-item active" style="background-image: url(../assets/img/slide/right_access-1.jpg)" dir="rtl">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown"> مرحبا بك في <span> رايت اكسس</span></h2>
@@ -134,7 +158,7 @@ if (isset($_COOKIE['user'])) {
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(../assets/img/slide/right_access-2.jpg)"  dir="rtl">
+        <div class="carousel-item" style="background-image: url(../assets/img/slide/right_access-2.jpg)" dir="rtl">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">حلول برمجية و تقنية </h2>
@@ -144,7 +168,7 @@ if (isset($_COOKIE['user'])) {
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(../assets/img/slide/right_access-3.jpg)"  dir="rtl">
+        <div class="carousel-item" style="background-image: url(../assets/img/slide/right_access-3.jpg)" dir="rtl">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown">شريكك في ابتكار البرمجيات </h2>
@@ -180,17 +204,17 @@ if (isset($_COOKIE['user'])) {
         <div class="row content">
           <div class="col-lg-6">
             <p style="font-size: 20px;">
-              شريكك في ابتكار البرمجيات 
+              شريكك في ابتكار البرمجيات
             </p>
             <ul>
-              <li><i class="fas fa-check-double" style="float:right"></i>  جوده عاليه</li>
-              <li><i class="fas fa-check-double" style="float:right"></i>  اسعار تنافسيه</li>
-              <li><i class="fas fa-check-double" style="float:right"></i>  فريق محترف</li>
+              <li><i class="fas fa-check-double" style="float:right"></i> جوده عاليه</li>
+              <li><i class="fas fa-check-double" style="float:right"></i> اسعار تنافسيه</li>
+              <li><i class="fas fa-check-double" style="float:right"></i> فريق محترف</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p> رايت اكسس
-            هو الشريك المفضل للعديد من الشركات الرائدة في العالم والشركات الصغيرة والمتوسطة ومنافسي التكنولوجيا. نحن نساعد الشركات على رفع قيمتها من خلال تطوير و تصميم المواقع  ، وتطبيقات الجوال بجميع انواعها  ، وأختبار البرمجيات  ،  و ايضا تصميم الواجهات للمواقع و التطبيقات
+              هو الشريك المفضل للعديد من الشركات الرائدة في العالم والشركات الصغيرة والمتوسطة ومنافسي التكنولوجيا. نحن نساعد الشركات على رفع قيمتها من خلال تطوير و تصميم المواقع ، وتطبيقات الجوال بجميع انواعها ، وأختبار البرمجيات ، و ايضا تصميم الواجهات للمواقع و التطبيقات
             </p>
             <a href="#why-us" class="btn-learn-more"> اعرف المزيد</a>
           </div>
@@ -251,55 +275,55 @@ if (isset($_COOKIE['user'])) {
             <div class="content">
               <h3>تطويرات وابتكارات مع خبراء التكنولوجيا</h3>
               <p>
-                 نقوم بتوظيف وبناء فرق التطوير المخصصة عن بُعد الخاصة بنا والمصممة وفقًا لاحتياجاتك الخاصة.
+                نقوم بتوظيف وبناء فرق التطوير المخصصة عن بُعد الخاصة بنا والمصممة وفقًا لاحتياجاتك الخاصة.
               </p>
             </div>
 
             <div class="accordion-list">
               <ul>
                 <li>
-                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> مهمتنا  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> مهمتنا <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                     <p>
-                    نقوم بتطوير و بناء المواقع
-                    و التطبيقات و المشاريع  المخصصة الخاصة بك والمصممة وفقًا لاحتياجاتك الخاصة. احصل على
-                    مطورين محترفين  يعملون حصريًا من أجلك كجزء من شركتك. نتعامل مع جميع الجوانب العملية 
-                    المتعلقة بالبرمجة و التصميم ، مما يوفر لك نصف التكلفة والكثير من الجهد.
+                      نقوم بتطوير و بناء المواقع
+                      و التطبيقات و المشاريع المخصصة الخاصة بك والمصممة وفقًا لاحتياجاتك الخاصة. احصل على
+                      مطورين محترفين يعملون حصريًا من أجلك كجزء من شركتك. نتعامل مع جميع الجوانب العملية
+                      المتعلقة بالبرمجة و التصميم ، مما يوفر لك نصف التكلفة والكثير من الجهد.
 
                     </p>
                   </div>
                 </li>
 
                 <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> رؤيتنا  <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> رؤيتنا <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                    <p>              
-                          هي إحدى شركات البرمجيات البارزة التي تساعد المؤسسات
-                          الأخرى على التحول إلى مؤسسات رقمية. إنها تميزك عن المنافسين 
-                          في السوق وتوفر مشاركة أفضل مع العملاء والشركاء والموظفين.
+                    <p>
+                      هي إحدى شركات البرمجيات البارزة التي تساعد المؤسسات
+                      الأخرى على التحول إلى مؤسسات رقمية. إنها تميزك عن المنافسين
+                      في السوق وتوفر مشاركة أفضل مع العملاء والشركاء والموظفين.
                     </p>
                   </div>
                 </li>
 
                 <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>  فلسفتنا <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> فلسفتنا <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                     <p>
-                    يحكم الناس على الكتاب من غلافه. قد يكون لدينا أفضل منتج ، وأعلى جودة ، وأكثر البرامج فائدة ، 
-                    وما إلى ذلك ، إذا قدمناها بطريقة متقطعة ، فسيتم اعتبارها على أنها متقطعة. 
-                    إذا قدمناها بطريقة إبداعية ومهنية ، سوف نحصل على النتائج المطلوبة.
+                      يحكم الناس على الكتاب من غلافه. قد يكون لدينا أفضل منتج ، وأعلى جودة ، وأكثر البرامج فائدة ،
+                      وما إلى ذلك ، إذا قدمناها بطريقة متقطعة ، فسيتم اعتبارها على أنها متقطعة.
+                      إذا قدمناها بطريقة إبداعية ومهنية ، سوف نحصل على النتائج المطلوبة.
                     </p>
                   </div>
                 </li>
 
                 <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>03</span>  خطتنا <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed"><span>03</span> خطتنا <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
-                    <p>   
-                        على مدار الأعوام الماضية ، درسنا الشركات التي حققت طفرات  في الإنجاز والمئات من 
-                        العملاء من خلال الأبحاث و الدراسات و قد قمنا بتبني جميع الأدوات المرتبطة
-                        بها لمساعدتنا على الوصول لتلك الإستراتيجية بشكل أفضل لعملائنا
-                        وتوجيه  ومراقبة تنفيذ تلك الإستراتيجية مع موظفينا
+                    <p>
+                      على مدار الأعوام الماضية ، درسنا الشركات التي حققت طفرات في الإنجاز والمئات من
+                      العملاء من خلال الأبحاث و الدراسات و قد قمنا بتبني جميع الأدوات المرتبطة
+                      بها لمساعدتنا على الوصول لتلك الإستراتيجية بشكل أفضل لعملائنا
+                      وتوجيه ومراقبة تنفيذ تلك الإستراتيجية مع موظفينا
 
                     </p>
                   </div>
@@ -320,7 +344,7 @@ if (isset($_COOKIE['user'])) {
       <div class="container">
         <div class="section-title">
           <h2>عملاؤنا</h2>
-          <p>  نبذه من عملاؤنا </p>
+          <p> نبذه من عملاؤنا </p>
         </div>
 
         <div class="row text-center">
@@ -388,7 +412,7 @@ if (isset($_COOKIE['user'])) {
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-mobile"></i></div>
-              <h4><a> تطوير تطبيقات الجوال   </a></h4>
+              <h4><a> تطوير تطبيقات الجوال </a></h4>
               <p>قم بإنشاء تطبيقك الخاص او تحديث تطبيقك الحالي عن طريق فريقنا الخبير المختص, بحيث يكون تطبيق يسوق نفسه بنفسه من خلال السلاسة و الإحترافية في التصميم مع المحافظة على الجودة العالية. </p>
             </div>
           </div>
@@ -396,7 +420,7 @@ if (isset($_COOKIE['user'])) {
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="fa fa-palette"></i></div>
-              <h4><a>  تصاميم UI/UX </a></h4>
+              <h4><a> تصاميم UI/UX </a></h4>
               <p>قم ببناء التصميم الذي تحتاجه في الوقت المحدد مع فريق متمرس يستخدم منهجا واضحًا وفعالًا, من خلال التواصل الدائم مع العميل للوصول الى النتيجة المرادة إضافة الى تناسب التصميم مع جميع الأجهزة .</p>
             </div>
           </div>
@@ -404,7 +428,7 @@ if (isset($_COOKIE['user'])) {
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
-              <h4><a> فحص و اختبار البرمجيات   </a></h4>
+              <h4><a> فحص و اختبار البرمجيات </a></h4>
               <p>استعن بخبرائنا لإجراء اختبار وتدقيق شامل ومتعدد المراحل لتطبيقك او موقعك بأعلى كفائة مهنية مع تقارير كاملة للاخطاء و المشاكل الموجودة .</p>
             </div>
           </div>
@@ -412,7 +436,7 @@ if (isset($_COOKIE['user'])) {
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-shopping-cart"></i></div>
-              <h4><a> مواقع التجارة الإلكترونية  </a></h4>
+              <h4><a> مواقع التجارة الإلكترونية </a></h4>
               <p>ثق بأفكارنا المتميزة للتخلص من نقاط خطط العمل القديمة ، و العمل بأساليب حديثة ، ودمج عصارة تجاربنا في مشروعك. للتسويق لمنتجاتك ب الطريقة الصحيحة</p>
             </div>
           </div>
@@ -420,8 +444,8 @@ if (isset($_COOKIE['user'])) {
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-tasks"></i></div>
-              <h4><a>   برامج اداره الشركات </a></h4>
-              <p>تبدأ اي شركة ناجحة ببرنامج جيد لإدارة أعمالهم   (نظام اداره عملاء ،نظام محاسبة ، نظام اداره موارد بشرية)</p>
+              <h4><a> برامج اداره الشركات </a></h4>
+              <p>تبدأ اي شركة ناجحة ببرنامج جيد لإدارة أعمالهم (نظام اداره عملاء ،نظام محاسبة ، نظام اداره موارد بشرية)</p>
             </div>
           </div>
 
@@ -472,9 +496,9 @@ if (isset($_COOKIE['user'])) {
             <div class="col-lg-4 col-md-6 portfolio-item filter-' . $row['en_catagory'] . '">
             <img src="../assets/img/portfolio/' . $row['first_img'] . '" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>' . $row['en_client'] . '</h4>
-              <p>' . $row['en_catagory'] . '</p>
-              <a href="portfolio-details.php?client=' . $row['en_client'] . '" class="details-link" title="More Details"><i class="fas fa-plus"></i></a>
+              <h4>' . $row['client'] . '</h4>
+              <p>' . $row['catagory'] . '</p>
+              <a href="portfolio-details.php?client=' . $row['client'] . '" class="details-link" title="More Details"><i class="fas fa-plus"></i></a>
             </div>
           </div>
             ';
@@ -497,9 +521,9 @@ if (isset($_COOKIE['user'])) {
       <div class="container" data-aos="zoom-in">
 
         <div class="text-center">
-          <h3>// ! نحن هنا للاجابه عن اسألتك  </h3>
+          <h3>! نحن هنا للاجابه عن اسألتك </h3>
           <p> تبحث عن استشاره ؟ </p>
-          <a class="cta-btn" href="#contact"> تواصل معنا</a>
+          <a class="cta-btn" href="contact.php"> تواصل معنا</a>
         </div>
 
       </div>
@@ -513,7 +537,7 @@ if (isset($_COOKIE['user'])) {
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>  تقنيات حديثه و متطوره </h2>
+          <h2> تقنيات حديثه و متطوره </h2>
           <p> التقنيات التي نستخدمها</p>
         </div>
 
@@ -616,76 +640,6 @@ if (isset($_COOKIE['user'])) {
     </section>
     <!-- end technologies section -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>تواصل</h2>
-          <p> تواصل معنا</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="info-box">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <h3> عنواننا </h3>
-                  <p>المملكة العربية السعودية - الرياض
-                      - طريق الملك فهد - برج حمد </p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="fas fa-envelope"></i>
-                  <h3> بريدنا الاكتروني</h3>
-                  <p>info@rightaccess.co<br></p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="fas fa-phone-alt"></i>
-                  <h3> اتصل بنا</h3>
-                  <p>966550978623+<br></p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6">
-            <form action="" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" value="<?php echo $name; ?>" placeholder=" اسمك" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" value="<?php echo $email; ?>" placeholder=" بريدك الاكتروني" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="عنوان" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="رسالتك" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">تحميل</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit"> ارسال</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -697,9 +651,9 @@ if (isset($_COOKIE['user'])) {
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <p>
-              المملكة العربية السعودية - الرياض
-              <br>
-                      - طريق الملك فهد - برج حمد<br><br>
+                المملكة العربية السعودية - الرياض
+                <br>
+                - طريق الملك فهد - برج حمد<br><br>
                 <strong>هاتف : </strong> 966559275722+ <br>
                 <strong>ايميل : </strong> info@rightaccess.co<br>
               </p>
@@ -726,15 +680,15 @@ if (isset($_COOKIE['user'])) {
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير مواقع</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير تطبيفات</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> تصاميم UI/UX  </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> تصاميم UI/UX </a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">فحص و اختبار البرمجيات </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">  مواقع تجاره الكترونيه </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">  براجم اداره الشركات </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> مواقع تجاره الكترونيه </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> براجم اداره الشركات </a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>   انضم لقايمتنا البريديه</h4>
+            <h4> انضم لقايمتنا البريديه</h4>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="انضم">
             </form>

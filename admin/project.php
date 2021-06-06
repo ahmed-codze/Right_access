@@ -152,6 +152,12 @@ if (isset($_GET['delete'])) {
                                 اضافة عمل جديد
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="clients.php">
+                                <span data-feather="users"></span>
+                                صور عملاؤنا
+                            </a>
+                        </li>
 
                     </ul>
 

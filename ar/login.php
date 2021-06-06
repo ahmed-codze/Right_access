@@ -118,8 +118,8 @@ if (isset($_GET['logout'])) {
   <link href="../assets/img/logo.jpg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <!-- Vendor CSS Files -->
   <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
@@ -132,7 +132,37 @@ if (isset($_GET['logout'])) {
   <!--  Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
   <link href="../assets/css/login.css" rel="stylesheet">
+  <style>
+    *,
+    .why-us .accordion-list a,
+    #hero .btn-get-started,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .form form .CTAA input,
+    .form form .CTAA a.switch,
+    .brand .heading p,
+    .form form label,
+    .form form input:not([type="submit"]) {
+      font-family: 'Cairo', sans-serif;
+    }
 
+    .form form label {
+      font-size: 19px;
+    }
+
+    .form form .CTAA a.switch {
+      font-size: 15px;
+    }
+
+    .form form input:not([type="submit"]) {
+      direction: rtl;
+      font-size: 18px;
+    }
+  </style>
 </head>
 
 <body>
@@ -168,7 +198,7 @@ if (isset($_GET['logout'])) {
           }
 
           ?>
-          <li><a class="nav-link scrollto" href="../index.php">English  </a></li>
+          <li><a class="nav-link scrollto" href="../index.php">English </a></li>
           <li><a class="getstarted scrollto" href="login.php">ابدأ رحلتك </a></li>
 
         </ul>
@@ -179,7 +209,7 @@ if (isset($_GET['logout'])) {
   </header><!-- End Header -->
 
 
-  <main id="main" >
+  <main id="main">
 
     <section class="inner-page">
       <div class=" text-center" data-aos="fade-up">
@@ -198,11 +228,6 @@ if (isset($_GET['logout'])) {
                 <div class="heading">
                   <h2> رايت اكسس</h2>
                   <p> اختيارك المناسب </p>
-                </div>
-
-                <div class="success-msg">
-                  <p>Great! You are one of our members now</p>
-                  <a class="profile" href="profile.php">Your Profile</a>
                 </div>
               </div>
 
@@ -302,9 +327,9 @@ if (isset($_GET['logout'])) {
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <p>
-              المملكة العربية السعودية - الرياض
-              <br>
-                      - طريق الملك فهد - برج حمد<br><br>
+                المملكة العربية السعودية - الرياض
+                <br>
+                - طريق الملك فهد - برج حمد<br><br>
                 <strong>هاتف : </strong> 966559275722+ <br>
                 <strong>ايميل : </strong> info@rightaccess.co<br>
               </p>
@@ -331,15 +356,15 @@ if (isset($_GET['logout'])) {
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير مواقع</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> تطوير تطبيفات</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> تصاميم UI/UX  </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> تصاميم UI/UX </a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">فحص و اختبار البرمجيات </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">  مواقع تجاره الكترونيه </a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">  برامج اداره الشركات </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> مواقع تجاره الكترونيه </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> برامج اداره الشركات </a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>   انضم لقايمتنا البريديه</h4>
+            <h4> انضم لقايمتنا البريديه</h4>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="انضم">
             </form>
