@@ -6,7 +6,6 @@
 -- Generation Time: 05 يونيو 2021 الساعة 23:17
 -- إصدار الخادم: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
-CREATE DATABASE right_access;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;

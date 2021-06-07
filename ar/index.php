@@ -88,6 +88,17 @@ if (isset($_COOKIE['user'])) {
     .navbar a {
       font-size: unset;
     }
+    @media screen and (max-width: 600px) {
+
+      .special-section-title h2::after {
+        content: "";
+        width: 120px;
+        height: 1px;
+        display: inline-block;
+        background: #4154f1;
+        margin: 15px;
+      }
+    }
   </style>
 
 </head>
@@ -154,21 +165,12 @@ if (isset($_COOKIE['user'])) {
         <div class="carousel-item active" style="background-image: url(../assets/img/slide/right_access-1.jpg)" dir="rtl">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown"> مرحبا بك في <span> رايت اكسس</span></h2>
+              <h2 class="animate__animated animate__fadeInDown"> شريكك للأول في الحلول البرمجية والتقنية</h2>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">اقرأ المزيد</a>
             </div>
           </div>
         </div>
 
-        <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(../assets/img/slide/right_access-2.jpg)" dir="rtl">
-          <div class="carousel-container">
-            <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">حلول برمجية و تقنية </h2>
-              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">اقرأ المزيد</a>
-            </div>
-          </div>
-        </div>
 
         <!-- Slide 3 -->
         <div class="carousel-item" style="background-image: url(../assets/img/slide/right_access-3.jpg)" dir="rtl">
@@ -207,17 +209,19 @@ if (isset($_COOKIE['user'])) {
         <div class="row content">
           <div class="col-lg-6">
             <p style="font-size: 20px;">
-              شريكك في ابتكار البرمجيات
+              شريكك التقني الأول  
             </p>
             <ul>
               <li><i class="fas fa-check-double" style="float:right"></i> جوده عاليه</li>
-              <li><i class="fas fa-check-double" style="float:right"></i> اسعار تنافسيه</li>
+              <li><i class="fas fa-check-double" style="float:right"></i> اسعار منافسه</li>
               <li><i class="fas fa-check-double" style="float:right"></i> فريق محترف</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p> رايت اكسس
-              هو الشريك المفضل للعديد من الشركات الرائدة في العالم والشركات الصغيرة والمتوسطة ومنافسي التكنولوجيا. نحن نساعد الشركات على رفع قيمتها من خلال تطوير و تصميم المواقع ، وتطبيقات الجوال بجميع انواعها ، وأختبار البرمجيات ، و ايضا تصميم الواجهات للمواقع و التطبيقات
+              هو الشريك المفضل للعديد من الشركات الرائدة في العالم والشركات الصغيرة والمتوسطة ومنافسي التكنولوجيا.
+              <br>
+               نحن نساعد الشركات على رفع قيمتها من خلال تطوير و تصميم المواقع ، وتطبيقات الجوال بجميع انواعها ، وأختبار البرمجيات ، و ايضا تصميم الواجهات للمواقع و التطبيقات
             </p>
             <a href="#why-us" class="btn-learn-more"> اعرف المزيد</a>
           </div>
@@ -236,7 +240,7 @@ if (isset($_COOKIE['user'])) {
             <div class="count-box">
               <i class="bi bi-emoji-smile"></i>
               <span data-purecounter-start="0" data-purecounter-end="330" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong> عملاء سعداء</strong></p>
+              <p><strong>  عميل سعيد</strong></p>
               <a href="#why-us">اعرف المزيد&raquo;</a>
             </div>
           </div>
@@ -245,7 +249,7 @@ if (isset($_COOKIE['user'])) {
             <div class="count-box">
               <i class="bi bi-journal-richtext"></i>
               <span data-purecounter-start="0" data-purecounter-end="850" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong> مشاريع مكتمله</strong> </p>
+              <p><strong> مشروع مكتمل </strong> </p>
               <a href="#why-us">اعرف المزيد&raquo;</a>
             </div>
           </div>
@@ -254,7 +258,7 @@ if (isset($_COOKIE['user'])) {
             <div class="count-box">
               <i class="bi bi-headset"></i>
               <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>مستشاري الفريق </strong> </p>
+              <p><strong>مستشار الفريق </strong> </p>
               <a href="#why-us">اعرف المزيد&raquo;</a>
             </div>
           </div>
@@ -278,7 +282,7 @@ if (isset($_COOKIE['user'])) {
             <div class="content">
               <h3>تطويرات وابتكارات مع خبراء التكنولوجيا</h3>
               <p>
-                نقوم بتوظيف وبناء فرق التطوير المخصصة عن بُعد الخاصة بنا والمصممة وفقًا لاحتياجاتك الخاصة.
+                مختصين في مجال تكنولوجيا المعلومات و الخدمات البرمجيه في المواقع و التطبيفات لتقديم افضل الحلول
               </p>
             </div>
 
@@ -288,10 +292,11 @@ if (isset($_COOKIE['user'])) {
                   <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> مهمتنا <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
                     <p>
-                      نقوم بتطوير و بناء المواقع
-                      و التطبيقات و المشاريع المخصصة الخاصة بك والمصممة وفقًا لاحتياجاتك الخاصة. احصل على
-                      مطورين محترفين يعملون حصريًا من أجلك كجزء من شركتك. نتعامل مع جميع الجوانب العملية
-                      المتعلقة بالبرمجة و التصميم ، مما يوفر لك نصف التكلفة والكثير من الجهد.
+                    أن نقدّم الحلول التقنية الاذكـى
+                    بالأدوات الأحدث
+                    المصممين وفقًا لاحتياجاتك الخاصة 
+                    ؛ كما أننا نعمل معك يداً بيد كجزء من شركتك. نتعامل مع جميع الجوانب 
+                    العملية المتعلقة بالبرمجة و التصميم ، مما يوفر لك نصف التكلفة والكثير من الجهد والوقت .
 
                     </p>
                   </div>
@@ -301,9 +306,8 @@ if (isset($_COOKIE['user'])) {
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> رؤيتنا <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p>
-                      هي إحدى شركات البرمجيات البارزة التي تساعد المؤسسات
-                      الأخرى على التحول إلى مؤسسات رقمية. إنها تميزك عن المنافسين
-                      في السوق وتوفر مشاركة أفضل مع العملاء والشركاء والموظفين.
+                        أن نكون الشريك الأول والأمثل دائماً الذي يقدّم الحلول التقنية الذكية بأسعار فريدة 
+                        في المملكة العربية السعودية والشرق الأوسط عامة        
                     </p>
                   </div>
                 </li>
@@ -408,7 +412,7 @@ if (isset($_COOKIE['user'])) {
             <div class="icon-box">
               <div class="icon"><i class="fas fa-laptop"></i></div>
               <h4><a> تطوير المواقع الالكترونيه</a></h4>
-              <p>عندك شركة او مؤسسة و حابب يكون عندك واجهة اعلانية من خلال موقع إلكتروني مميز يساعك في عرض خدماتك بطريقة إحترافية و أسعار منافسة و وقت قياسي Right access عندها الحل . </p>
+              <p>الواجهة الاولى لأي شركة تبدأ من الموقع الالكتروني .                    Right access شريكك الاذكى الذي يقدم لك أذكى الحلول بأفضل الاسعار </p>
             </div>
           </div>
 
@@ -524,7 +528,7 @@ if (isset($_COOKIE['user'])) {
       <div class="container" data-aos="zoom-in">
 
         <div class="text-center">
-          <h3>! نحن هنا للاجابه عن اسألتك </h3>
+          <h3> نحن هنا للاجابه عن أسئلتك !</h3>
           <p> تبحث عن استشاره ؟ </p>
           <a class="cta-btn" href="contact.php"> تواصل معنا</a>
         </div>
@@ -539,7 +543,7 @@ if (isset($_COOKIE['user'])) {
     <section id="technologies" class="technologies">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        <div class="section-title special-section-title">
           <h2> تقنيات حديثه و متطوره </h2>
           <p> التقنيات التي نستخدمها</p>
         </div>
